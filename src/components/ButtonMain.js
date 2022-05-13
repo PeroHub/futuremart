@@ -6,4 +6,4 @@ function ButtonMain({signup}) {
      );
 }
 
-export default ButtonMain;https://github.com/PeroHub/futuremart/tree/development
+export default ButtonMain;

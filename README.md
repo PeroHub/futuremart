@@ -2,6 +2,7 @@
 
 - git clone https://github.com/PeroHub/futuremart.git
 - npm install
+- Do "npm install react-scripts" if you are having issues with react scripts
 
 ## After making changes
 - git add .

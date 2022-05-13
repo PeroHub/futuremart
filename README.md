@@ -1,7 +1,7 @@
 ## Cloning the Repo
 
 - git clone https://github.com/PeroHub/futuremart.git
-- git remote add upstream https://github.com/PeroHub/futuremart.git
+- npm install
 
 ## After making changes
 - git add .

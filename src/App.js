@@ -18,6 +18,9 @@ const theme = createTheme({
     },
     typography: {
       fontFamily: "Inter"
+    },
+    shape: {
+      borderRadius: 0
     }
 })
 

@@ -41,7 +41,7 @@ function Footer() {
 
           <p className="bold">Feel free to contact us via:</p>
           <div className="icons">
-            <div>fa</div>
+            <div>fa</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
             <div>tw</div>
             <div>ig</div>
             <div>yt</div>

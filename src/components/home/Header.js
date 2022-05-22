@@ -1,29 +1,29 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import ButtonMain from "../ButtonMain"
-import ImageFrame from '../ImageFrame';
-import me from "../../images/Tshirt.png"
+// import ButtonMain from "../ButtonMain"
+// import ImageFrame from '../ImageFrame';
+// import me from "../../images/Tshirt.png"
 import "./header.css"
-import Login from '../auth/Login';
-import Logout from '../auth/Logout';
+// import Login from '../auth/Login';
+// import Logout from '../auth/Logout';
 import { useAuth0 } from '@auth0/auth0-react';
 import AppBarContainer from './AppBarContainer';
 import TextField from '@mui/material/TextField';
 
 
 function Header() {
-    const {  isAuthenticated, isLoading, user, loginWithRedirect } = useAuth0()
+    const {  isAuthenticated, user } = useAuth0()
     console.log(isAuthenticated)
     console.log(JSON.stringify(user))
 
-    const  handleLoginCheck = () =>  {
-        if(!isAuthenticated){
-            loginWithRedirect()
-        }else {
-            alert("all good")
-        }
-    }
+    // const  handleLoginCheck = () =>  {
+    //     if(!isAuthenticated){
+    //         loginWithRedirect()
+    //     }else {
+    //         alert("all good")
+    //     }
+    // }
     // if(isLoading){
     //     return <div>Loading...</div>
     // }
@@ -40,7 +40,7 @@ function Header() {
                         </Box>
                     </Box>
                     <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
-                       <ImageFrame width={"500px"} height={"500px"} />
+                       
                     </Box>
                 </Box>
                

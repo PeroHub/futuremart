@@ -1,12 +1,11 @@
-import Box from '@mui/material/Box';
+
 import Avatar from '@mui/material/Avatar'
-import me from "../images/Tshirt.png"
 
 function ImageFrame({width, height, border, image, padding}) {
     
      return(
           <Avatar  sx={{ height:{height}, width:{width}, border:{border}, padding:{padding}}}>
-               <img src={image}/>
+               <img src={image} alt="cloth"/>
           </Avatar>
      );
 }

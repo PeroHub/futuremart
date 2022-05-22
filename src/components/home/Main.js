@@ -36,7 +36,7 @@ import PWSOFM4 from '../../images/PWSOFM4.png';
 
 
 function Main() {
-    const[products, setproducts] = useState(futureProducts);
+    const[products] = useState(futureProducts);
         return ( 
         <>
             

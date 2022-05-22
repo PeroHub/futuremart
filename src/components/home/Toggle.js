@@ -1,4 +1,3 @@
-import Menu from '@mui/material/Menu';
 import Box from '@mui/material/Box';
 import { FaAlignJustify } from "react-icons/fa";
 import Login from '../auth/Login';

@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 
 
 import { useAuth0 } from '@auth0/auth0-react';
@@ -23,15 +23,15 @@ import Logout from '../auth/Logout';
 
 function AppBarContainer() {
 
-  const {  isAuthenticated, isLoading, user, loginWithRedirect } = useAuth0()
+  const {  isAuthenticated } = useAuth0()
 
-  const  handleLoginCheck = () =>  {
-    if(!isAuthenticated){
-        loginWithRedirect()
-    }else {
-        alert("all good")
-    }
-}
+//   const  handleLoginCheck = () =>  {
+//     if(!isAuthenticated){
+//         loginWithRedirect()
+//     }else {
+//         alert("all good")
+//     }
+// }
   
     return ( 
         <AppBar position="static" sx={{background: "#fff"}}>

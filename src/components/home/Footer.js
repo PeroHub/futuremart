@@ -3,7 +3,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <Box sx={{ border: "1px solid red" }}>
+    <Box sx={{ border: "1px solid red" }} mt={15}>
       <div className="footer">
         <div className="footer__left">
           <div className="footer__leftOptions">

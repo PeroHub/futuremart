@@ -56,9 +56,9 @@ function Main() {
                         <Card xs={12} sx={{height:"45vh", textAlign:"end", backgroundColor:"#FAFAFA"}}>
                             <Button  variant="contained" size="small" sx={{backgroundColor:"#ED8204", borderRadius:"none"}} >{product.price}</Button>
                             <CardMedia  sx={{  display:"flex", alignItems:"center", justifyContent:"space-around"}}>
-                                <Box sx={{ display:"flex", border:"1px solid red", width:"100%", height:"40vh", alignItems:"center", justifyContent:"space-around"}}>
+                                <Box sx={{ display:"flex", width:"100%", height:"40vh", alignItems:"center", justifyContent:"space-around"}}>
                                     <ImageFrame  width={"170px"} height={"170px"}  image={product.image}/>
-                                    <ImageFrame border={"9px solid #0D08FF"} width={"70px"} height={"70px"}  />
+                                    <ImageFrame  width={"90px"} height={"90px"}  image={product.image}/>
                                 </Box>
                                 
                             </CardMedia>
@@ -87,15 +87,14 @@ function Main() {
             
             
             {/* Second Grid: How to shop on Future Mart */}
-            <Grid container columns={12} mt={15} sx={{display:"flex", flexDirection:"row", textAlign:"left", justifyContent:"center"}}>
-                <Grid item xs={12} sm={12} md={12} sx={{maxwidth:"50px", display:"flex", flexDirection:"row", justifyContent:"center"}}  >
-                    <Typography sx={{ width:"433px", height:"48px", textAlign:"center", color:"#333333", fontFamily:"Inter", fontSize:"30px", lineHeight:"47.2px", fontWeight:"600"}}variant="h5">How To Shop On Future Mart</Typography>
-                </Grid>
-            </Grid>
+            <Box mt={15} sx={{display:"flex", flexDirection:"row", textAlign:"left", justifyContent:"center"}}>
+                <Typography sx={{ width:"433px", height:"48px", textAlign:"center", color:"#333333", fontFamily:"Inter", fontSize:"30px", lineHeight:"47.2px", fontWeight:"600"}}variant="h5">How To Shop On Future Mart</Typography>
+            </Box>    
             
-            <Grid container  spacing={10} columns={12} >
-                <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center"}}>
-                    <Typography>Sign Up</Typography>
+            <Grid container  spacing={10} columns={12} sx={{ mt:{xs:5, sm:0, md:0} }} >
+                <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center" }}>
+                    <Typography sx={{fontWeight:"bold", color:"#333333"}}>Sign Up</Typography>
+                    <br></br>
                     <Box width="fullWidth" sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
                         <Avatar 
                             sx={{width:"65px", height:"65px"}}
@@ -103,10 +102,12 @@ function Main() {
                             src={signup}>
                         </Avatar> 
                     </Box>
+                    <br></br>
                     <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center"}} >
-                    <Typography>Shop</Typography>
+                    <Typography sx={{fontWeight:"bold", color:"#333333"}}>Shop</Typography>
+                    <br></br>
                     <Box width="fullWidth" sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
                         <Avatar 
                             sx={{width:"65px", height:"65px"}}
@@ -114,10 +115,12 @@ function Main() {
                             src={shop}>
                         </Avatar>
                     </Box>
+                    <br></br>
                     <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center"}} >
-                    <Typography>Check Out</Typography>
+                    <Typography sx={{fontWeight:"bold", color:"#333333"}}>Check Out</Typography>
+                    <br></br>
                     <Box width="fullWidth" sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
                         <Avatar 
                             sx={{width:"65px", height:"65px"}}
@@ -125,10 +128,12 @@ function Main() {
                             src={checkout}>
                         </Avatar>
                     </Box>
+                    <br></br>
                     <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center"}} >
-                    <Typography>Wait for Delivery </Typography>
+                    <Typography sx={{fontWeight:"bold", color:"#333333"}}>Wait for Delivery </Typography>
+                    <br></br>
                     <Box width="fullWidth" sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
                         <Avatar 
                             sx={{width:"65px", height:"65px"}}
@@ -136,6 +141,7 @@ function Main() {
                             src={waitfordelivery}>
                         </Avatar>
                     </Box>
+                    <br></br>
                     <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
                 </Grid>
                 
@@ -146,13 +152,13 @@ function Main() {
         
         {/* backgroundColor:"#ED8204" */}
         {/*Third grid: You will look fabulous */}
-        <Box mt={10} sx={{border: "1px solid red", backgroundColor:"#ED8204", p:2, display: {xs: "block", sm: "flex", md: "flex"}, flexWrap: "wrap", justifyContent:{xs:"center", sm:"center", md:"center"}, alignItems:{xs:"center", sm:"center", md:"center"}}}>          
-            <Box sx={{border: "1px solid red", width: {xs: "100%", md: "40%"}, display: "flex", justifyContent: "center", alignItems: "center"}}>
+        <Box mt={10} sx={{backgroundColor:"#ED8204", p:2, display: {xs: "block", sm: "flex", md: "flex"}, flexWrap: "wrap", justifyContent:{xs:"center", sm:"center", md:"center"}, alignItems:{xs:"center", sm:"center", md:"center"}}}>          
+            <Box sx={{ width: {xs: "100%", md: "40%"}, display: "flex", justifyContent: "center", alignItems: "center"}}>
                 <img src={fourthgridpicture} alt="" sx={{width:"50px"}}/>
             </Box>
-            <Box sx={{border: "1px solid red",textAlign: "center",  width: {xs: "100%", md: "50%"}, display: "flex", flexDirection:"column", justifyContent: "center", alignItems: "center"}}>
-                <Box sx={{border: "1px solid red", textAlign:{xs:"center", sm:"center", md:"start"}, width:"70%", display:"block", flexDirection:"column" }}>
-                    <Typography sx={{color:"white", fontWeight:"bold", fontSize:"2.5rem"}} variant="h5">You’ll look good and <br/>fabulous on our swags.  </Typography>
+            <Box sx={{textAlign: "center",  width: {xs: "100%", md: "50%"}, display: "flex", flexDirection:"column", justifyContent: "center", alignItems: "center"}}>
+                <Box sx={{textAlign:{xs:"center", sm:"center", md:"start"}, width:{sx:"90%", sm:"90%", md:"70%"}, display:"block", flexDirection:"column" }}>
+                    <Typography sx={{color:"white", fontWeight:"bold", fontSize:{ xs:"2rem", sm:"2rem", md:"2.5rem"} }} variant="h5">You’ll look good and <br/>fabulous on our swags.  </Typography>
                     <br></br>
                     <Button variant="contained" size="small" sx={{textTransform:"none", width:"200px", height:"50px", borderRadius:"5px"}}>Shop Now</Button>
                 </Box>
@@ -164,45 +170,45 @@ function Main() {
                
           
         {/* Fourth grid:Featured products */}
-        <Container maxWidth="lg" sx={{width:"80%", border:  "1px solid red"}}>
+        <Container maxWidth="lg" sx={{width:{xs:"100%", sm:"80%", md:"80%"}}}>
             <Typography mt={15} sx={{ maxWwidth:"50px", textAlign:"left", color:"#333333", fontFamily:"Inter", fontSize:"30px", lineHeight:"47.2px", fontWeight:"600"}}variant="h5">Featured Products</Typography>
             
-            <Grid container spacing={6} columns={12}  sx={{  display:"flex", flexDirection:"row", justifyContent:"center"}} >
+                        
                 
-                {products.map((product) =>(
-                <Grid item xs={12} sm={12} md={4} key={product.id}>
-            
-                    <Card xs={12} sx={{height:"45vh", backgroundColor:"#FAFAFA"}}>
-                        <Button  variant="contained" size="small" sx={{backgroundColor:"#ED8204", borderRadius:"none"}} >{product.price}</Button>
-                        <CardMedia  sx={{  display:"flex", alignItems:"center", justifyContent:"space-around"}}>
-                            <Box sx={{ display:"flex", border:"1px solid red", width:"100%", height:"40vh", alignItems:"center", justifyContent:"space-around"}}>
-                                <ImageFrame border={"10px solid #0D08FF"} p={30} width={"170px"} height={"170px"} padding={"50px"} image={product.image}/>
-                                <ImageFrame border={"9px solid #0D08FF"} width={"70px"} height={"70px"}  />
-                            </Box>
+            <Grid container spacing={6} columns={12} mt={1} sx={{  display:"flex", flexDirection:"row", justifyContent:"center"}} >
+                
+            {products.map((product) =>(
+                    <Grid item xs={12} sm={12} md={4} key={product.id}>
+                
+                        <Card xs={12} sx={{height:"45vh", textAlign:"end", backgroundColor:"#FAFAFA"}}>
+                            <Button  variant="contained" size="small" sx={{backgroundColor:"#ED8204", borderRadius:"none"}} >{product.price}</Button>
+                            <CardMedia  sx={{  display:"flex", alignItems:"center", justifyContent:"space-around"}}>
+                                <Box sx={{ display:"flex", width:"100%", height:"40vh", alignItems:"center", justifyContent:"space-around"}}>
+                                    <ImageFrame  width={"170px"} height={"170px"}  image={product.image}/>
+                                    <ImageFrame  width={"90px"} height={"90px"}  image={product.image}/>
+                                </Box>
+                                
+                            </CardMedia>
+                        </Card>
+                        <Card sx={{height:"17vh"}}>
+                        <Typography mt={2} sx={{textAlign:"center", fontFamily:"Quando", color:"#333333", fontSize:"1rem", lineHeight:{md:"1.5rem"}, fontWeight:"bold"}}>{product.cetegory}</Typography>
+                        <CardActions sx={{ width:"100%", display:"flex", flexDirection:"row", justifyContent:"space-between", alignContent:"end"}}>
+                        {/* <FavoriteBorderIcon sx={{width:"19%", height:"19px"}}/> */}
                             
-                        </CardMedia>
-                    </Card>
-                    <Card sx={{height:"17vh"}}>
-                    <Typography mt={2} sx={{textAlign:"center", fontFamily:"Quando", color:"#333333", fontSize:"1rem", lineHeight:{md:"1.5rem"}, fontWeight:"bold"}}>{product.cetegory}</Typography>
-                    <CardActions sx={{ width:"100%", display:"flex", flexDirection:"row", justifyContent:"space-between", alignContent:"end"}}>
-                    {/* <FavoriteBorderIcon sx={{width:"19%", height:"19px"}}/> */}
-                        
-                        <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<FavoriteIcon sx={{color:"#B0B0B0"}}/>}> Save</Button>
-                        <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart </Button>
-                        
-                        
-                    </CardActions>
-                    </Card>
-            
-                                            
-                </Grid>
-                ))} 
-        </Grid>
-        <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
-            <ButtonMain variant={"outlined"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} /> 
-        </Box>
-
-
+                            <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<FavoriteIcon sx={{color:"#B0B0B0"}}/>}> Save</Button>
+                            <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart </Button>
+                            
+                            
+                        </CardActions>
+                        </Card>
+                
+                                                
+                    </Grid>
+                    ))} 
+            </Grid>
+            <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
+                <ButtonMain variant={"outlined"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} /> 
+            </Box>
             {/* Fifth grid: Companies who trust us */}
             <Grid container columns={12} mt={15} sx={{display:"flex", flexDirection:"row", textAlign:"left", justifyContent:"center"}}>
                 <Grid item xs={12} sm={12} md={12} sx={{maxwidth:"50px", display:"flex", flexDirection:"row", justifyContent:"center"}}  >
@@ -210,7 +216,7 @@ function Main() {
                 </Grid>
             </Grid>
             
-            <Grid container  spacing={6} columns={12} >
+            <Grid container  spacing={6} columns={12} sx={{ mt:{xs:5, sm:0, md:0}}} >
                 <Grid item xs={12} sm={6} md={3}>
                     <Box width="fullWidth" sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
                         <Avatar 
@@ -252,7 +258,20 @@ function Main() {
 
         
         {/* Sixth grid: Shopping smart has its benefits */}
-        <Box mt={10} sx={{border: "1px solid red", backgroundColor:"#ED8204", p:2, display: {xs: "block", sm: "flex", md: "flex"}, flexWrap: "wrap", justifyContent:{xs:"center", sm:"center", md:"center"}, alignItems:{xs:"center", sm:"center", md:"center"}}}>          
+        <Box mt={10} sx={{ backgroundColor:"#ED8204", p:2, display: {xs: "block", sm: "flex", md: "flex"}, flexWrap: "wrap", justifyContent:{xs:"center", sm:"center", md:"center"}, alignItems:{xs:"center", sm:"center", md:"center"}}}>          
+            <Box sx={{ width: {xs: "100%", md: "40%"}, display: "flex", justifyContent: "center", alignItems: "center"}}>
+                <img src={fourthgridpicture} alt="" sx={{width:"50px"}}/>
+            </Box>
+            <Box sx={{ textAlign: "center",  width: {xs: "100%", md: "50%"}, display: "flex", flexDirection:"column", justifyContent: "center", alignItems: "center"}}>
+                <Box sx={{ textAlign:{xs:"center", sm:"center", md:"start"}, width:{sx:"90%", sm:"90%", md:"70%"}, display:"block", flexDirection:"column" }}>
+                <Typography sx={{color:"white", fontWeight:"bold", fontSize:{ xs:"2rem", sm:"rem", md:"2.5rem"} }} variant="h5">Shopping Smart <br/> has its benefits. </Typography>
+                    <br></br>
+                    <Button variant="contained" size="small" sx={{textTransform:"none", width:"200px", height:"50px", borderRadius:"5px"}}>Shop Now</Button>
+                </Box>
+            </Box>
+        </Box>
+
+        {/* <Box mt={10} sx={{border: "1px solid red", backgroundColor:"#ED8204", p:2, display: {xs: "block", sm: "flex", md: "flex"}, flexWrap: "wrap", justifyContent:{xs:"center", sm:"center", md:"center"}, alignItems:{xs:"center", sm:"center", md:"center"}}}>          
             <Box sx={{border: "1px solid red",textAlign: "center", height: {xs:"70%", md:"50%"}, width: {xs: "70%", md: "40%"}, display: "flex", justifyContent: {xs:"center", md:"end"}, alignItems: "center"}}>
                 <img src={seventhgridimage} alt="" sx={{ height:{xs:"50%", sm:"50%", md:"80%"}}}/>
             </Box>
@@ -263,7 +282,7 @@ function Main() {
                     <Button variant="contained" size="small" sx={{textTransform:"none", width:"200px", height:"50px", borderRadius:"5px"}}>Shop Now</Button>
                 </Box>
             </Box>
-        </Box>
+        </Box> */}
         
 
         
@@ -273,9 +292,8 @@ function Main() {
             <Box mt={10}>
                 <Typography sx={{ width:"100%", height:"48px", textAlign:"center", color:"#333333", fontFamily:"Inter", fontSize:"30px", fontWeight:"600"}}variant="h5">People Who Shopped On Future Mart</Typography>
             </Box>    
-            {/* <Typography mt={9} sx={{textAlign:"center"}}>People Who Shopped On Future Mart</Typography> */}
-
-            <Grid container spacing={10} columns={12} >
+            
+            <Grid container spacing={10} mt={0} columns={12} sx={{ mt:{xs:5, sm:0, md:0} }} >
                 <Grid item xs={12} sm={6} md={3} sx={{display:"block", justifyContent:"center", textAlign:"center"}}>
                     <Box sx={{display:"flex", justifyContent:"center"}}>
                     <Avatar 
@@ -283,8 +301,10 @@ function Main() {
                             src={PWSOFM1}>
                     </Avatar>
                     </Box>
+                    <br></br>
                     <Typography>Mercy Okon</Typography>
                     <Typography sx={{color:"#ED8204"}}>Web Developer</Typography>
+                    <br></br>
                     <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"block", justifyContent:"center", textAlign:"center"}}>
@@ -294,8 +314,10 @@ function Main() {
                             src={PWSOFM2}>
                     </Avatar>
                     </Box>
+                    <br></br>
                     <Typography>Bertila Sam</Typography>
                     <Typography sx={{color:"#ED8204"}}>Web Developer</Typography>
+                    <br></br>
                     <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"block", justifyContent:"center", textAlign:"center"}}>
@@ -305,8 +327,10 @@ function Main() {
                             src={PWSOFM3}>
                     </Avatar>
                     </Box>
+                    <br></br>
                     <Typography>Uduak Peter</Typography>
                     <Typography sx={{color:"#ED8204"}}>Web Developer</Typography>
+                    <br></br>
                     <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
                 </Grid>
                 
@@ -317,8 +341,10 @@ function Main() {
                             src={PWSOFM4}>
                     </Avatar>
                     </Box>
+                    <br></br>
                     <Typography>Clement Essien</Typography>
                     <Typography sx={{color:"#ED8204"}}>Web Developer</Typography>
+                    <br></br>
                     <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
                 </Grid>
             </Grid>

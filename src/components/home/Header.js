@@ -42,10 +42,13 @@ function Header({bangle}) {
     const  location = useLocation()
 
     let rightImg
+    let textValue
     if(location.pathname === "/"){
         rightImg = landingImg
+        textValue = <Typography sx={{ fontSize: {xs: "2rem", md: "2.8rem"},  fontWeight: "900"}}>Welcome! <br /> Wetin you for like Buy?</Typography>
     }else if(location.pathname === "/product"){
         rightImg = bangle
+        textValue = <Typography sx={{ fontSize: {xs: "2rem", md: "2.8rem"},  fontWeight: "900"}}>We get affordable! <br /> swags wey you go like.</Typography>
     }
 
     // const  handleLoginCheck = () =>  {
@@ -65,7 +68,7 @@ function Header({bangle}) {
             <Box sx={{ minHeight: "50vh", display: "flex",  justifyContent: "center", alignItems: "center"}}>
                 <Box sx={{width: {xs: "100%", md: "80%"}, display: {sm : "block", md: "grid"}, height: "inherit", gridTemplateColumns: "1fr 1fr", margin: "0 auto" }}>
                     <Box sx={{display: "flex", p:2, flexDirection: "column", color: "#474747", justifyContent: "center"}}>
-                        <Typography sx={{ fontSize: {xs: "2rem", md: "2.8rem"},  fontWeight: "900"}}>Welcome! <br /> Wetin you for like Buy?</Typography>
+                        {textValue}
                         <Box sx={{display: "flex"}}>
                             <TextField 
                                 fullWidth  

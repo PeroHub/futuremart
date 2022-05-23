@@ -8,6 +8,7 @@ import Container from '@mui/material/Container';
 
 
 import { useAuth0 } from '@auth0/auth0-react';
+import { useNavigate } from "react-router-dom"
 // import { BsFillHeartFill } from "react-icons/bs"
 
 import logo from '../../images/Logo.svg'
@@ -24,6 +25,10 @@ import Logout from '../auth/Logout';
 function AppBarContainer() {
 
   const {  isAuthenticated } = useAuth0()
+  let navigate = useNavigate()
+  function redirect() {
+    navigate("/")
+  }
 
 //   const  handleLoginCheck = () =>  {
 //     if(!isAuthenticated){
@@ -38,7 +43,11 @@ function AppBarContainer() {
       <Container maxWidth="xl" sx={{ width: {xs: "100%", sm: "80%", md: "80%"}, display: "flex", justifyContent: "space-between"}}>
         
           <IconButton sx={{display: "flex", justifyContent: "center", alignItems: "center", flexGrow: {xs: 1, sm:0, md: 0}}}>
-            <img alt="logo" src={logo} />
+            <img 
+              alt="logo" 
+              src={logo} 
+              onClick={redirect}
+              />
           </IconButton>
           
           <Box sx={{display: {xs: "none", sm: "none", md: "flex"}, justifyContent: "space-evenly", alignItems: "center", width: "30%", flexGrow: {xs: 1, sm:0, md: 0}}}>

@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 // import { futureTheme } from "./theme"
 import Home from './components/home/Home';
+import Product from './components/products/Product';
 
 
 
@@ -31,6 +32,7 @@ function App() {
       <ThemeProvider theme={theme}>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/product" element={<Product />} />
       </Routes>
       </ThemeProvider>
     </div>

@@ -37,6 +37,9 @@ import PWSOFM4 from '../../images/PWSOFM4.png';
 
 function Main() {
     const[products] = useState(futureProducts);
+    // let size = 3
+    // let items = products.slice(0, size)
+    // console.log(items)
         return ( 
         <>
             

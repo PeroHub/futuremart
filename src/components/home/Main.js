@@ -41,14 +41,14 @@ function Main() {
         <>
             
             {/* First Grid Our products */}
-            <Container maxWidth="lg" sx={{width:{xs:"100%", sm:"80%", md:"80%"} }}>
+            <Container maxWidth="lg" sx={{width:{xs:"100%", sm:"80%", md:"80%"}, mt: 8 }}>
                 <Box >
                     <Typography sx={{ maxWwidth:"50px", textAlign:"left", color:"#333333", fontFamily:"Inter", fontSize:"30px", lineHeight:"47.2px", fontWeight:"600"}}variant="h5">Our Products</Typography>
 
                 </Box>
                         
                 
-                <Grid container spacing={6} columns={12} mt={1} sx={{ border:"1px solid red", display:"flex", flexDirection:"row", justifyContent:"center"}} >
+                <Grid container spacing={6} columns={12} mt={1} sx={{  display:"flex", flexDirection:"row", justifyContent:"center"}} >
                 
                     {products.map((product) =>(
                     <Grid item xs={12} sm={12} md={4} key={product.id}>
@@ -57,7 +57,7 @@ function Main() {
                             <Button  variant="contained" size="small" sx={{backgroundColor:"#ED8204", borderRadius:"none"}} >{product.price}</Button>
                             <CardMedia  sx={{  display:"flex", alignItems:"center", justifyContent:"space-around"}}>
                                 <Box sx={{ display:"flex", border:"1px solid red", width:"100%", height:"40vh", alignItems:"center", justifyContent:"space-around"}}>
-                                    <ImageFrame border={"10px solid #0D08FF"} p={30} width={"170px"} height={"170px"} padding={"50px"} image={product.image}/>
+                                    <ImageFrame  width={"170px"} height={"170px"}  image={product.image}/>
                                     <ImageFrame border={"9px solid #0D08FF"} width={"70px"} height={"70px"}  />
                                 </Box>
                                 
@@ -164,15 +164,15 @@ function Main() {
                
           
         {/* Fourth grid:Featured products */}
-        <Container maxWidth="lg" sx={{width:"80%"}}>
+        <Container maxWidth="lg" sx={{width:"80%", border:  "1px solid red"}}>
             <Typography mt={15} sx={{ maxWwidth:"50px", textAlign:"left", color:"#333333", fontFamily:"Inter", fontSize:"30px", lineHeight:"47.2px", fontWeight:"600"}}variant="h5">Featured Products</Typography>
             
-            <Grid container spacing={6} columns={12} mt={1} sx={{ border:"1px solid red", display:"flex", flexDirection:"row", justifyContent:"center"}} >
+            <Grid container spacing={6} columns={12}  sx={{  display:"flex", flexDirection:"row", justifyContent:"center"}} >
                 
                 {products.map((product) =>(
                 <Grid item xs={12} sm={12} md={4} key={product.id}>
             
-                    <Card xs={12} sx={{height:"45vh", textAlign:"end", backgroundColor:"#FAFAFA"}}>
+                    <Card xs={12} sx={{height:"45vh", backgroundColor:"#FAFAFA"}}>
                         <Button  variant="contained" size="small" sx={{backgroundColor:"#ED8204", borderRadius:"none"}} >{product.price}</Button>
                         <CardMedia  sx={{  display:"flex", alignItems:"center", justifyContent:"space-around"}}>
                             <Box sx={{ display:"flex", border:"1px solid red", width:"100%", height:"40vh", alignItems:"center", justifyContent:"space-around"}}>

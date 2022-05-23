@@ -8,7 +8,7 @@ function Home() {
     let me = futureProducts()
     console.log(me)
     return ( 
-        <div>
+        <div style={{overflowX: "hidden"}}>
             <Header />
             <Main />
             <Footer />

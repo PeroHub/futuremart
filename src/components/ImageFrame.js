@@ -1,12 +1,17 @@
-
+import Box from '@mui/material/Box'
 import Avatar from '@mui/material/Avatar'
 
-function ImageFrame({width, height, border, image, padding}) {
+function ImageFrame({width, height, image}) {
     
      return(
-          <Avatar  sx={{ height:{height}, width:{width}, border:{border}, padding:{padding}}}>
-               <img src={image} alt="cloth"/>
-          </Avatar>
+          <Box sx={{ height:height, width:width,  background: "#0D08FF",  borderRadius: "50%", display: "flex", justifyContent:"center", alignItems: "center", p:4}}>
+               
+                    <Box sx={{width: "inherit", height: "inherit", borderRadius: "inherit", display: "flex", justifyContent:"center", alignItems: "center"}}>
+                         <img src={image} alt="cloth"/>
+               
+                    </Box>
+          </Box>
+          
      );
 }
 export default ImageFrame;

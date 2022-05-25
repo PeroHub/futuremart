@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import Footer from "./home/Footer";
 import Shipping from "./CheckoutComponent/Shipping";
 import Payment from "./CheckoutComponent/Payment";
-import Review from "./CheckoutComponent/Review";
+// import Review from "./CheckoutComponent/Review";
 import PersonalDetails from "./CheckoutComponent/PersonalDetails";
 
 const steps = [

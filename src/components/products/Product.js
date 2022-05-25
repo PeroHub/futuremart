@@ -8,7 +8,7 @@ import CardActions from '@mui/material/CardActions';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ImageFrame from '../ImageFrame';
-import AppBarContainer from '../home/AppBarContainer';
+// import AppBarContainer from '../home/AppBarContainer';
 import Header from '../home/Header';
 import fourthgridpicture from '../../images/fourthgridpicture.png';
 import { futureProducts } from "../../products"

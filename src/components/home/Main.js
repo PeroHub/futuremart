@@ -23,7 +23,7 @@ import CWTU3 from '../../images/CWTU3.png';
 import CWTU4 from '../../images/CWTU4.png';
 
 // Seventh grid image
-import seventhgridimage from '../../images/seventhgridimage.png';
+// import seventhgridimage from '../../images/seventhgridimage.png';
 
 // People Who Shop On FutureMart Images
 import PWSOFM1 from '../../images/PWSOFM1.png';

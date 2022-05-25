@@ -6,6 +6,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Home from './components/home/Home';
 import Product from './components/products/Product';
 import Error from "./components/Error"
+import CheckoutPage from './components/CheckoutPage';
 
 
 
@@ -34,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="*" element={<Error />}/>
       </Routes>
       </ThemeProvider>

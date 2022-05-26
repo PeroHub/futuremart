@@ -1,5 +1,7 @@
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import { FaAlignJustify } from "react-icons/fa";
+import { Link } from "react-router-dom"
 import Login from '../auth/Login';
 import Logout from '../auth/Logout';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -18,7 +20,35 @@ function Toggle() {
                 <button type="button" class="btn-close box-content w-4 h-4 p-2 -my-5 -mr-2 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
-            {isAuthenticated ? <Logout /> : <Login />  }
+            <Box >
+              <Link to="/product">
+                  <Typography
+                  noWrap
+                  component="a"
+                  href="/"
+                  sx={{
+                    display: { xs: 'none', md: 'flex' },
+                    color: 'black',
+                    textDecoration: 'none',
+                  }}
+                >
+                  Products
+                </Typography>
+              </Link>
+              
+            <Typography
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                display: { xs: 'none', md: 'flex' },
+                color: 'black',
+                textDecoration: 'none',
+              }}
+            >
+              About FutureMart
+            </Typography>
+          </Box>
             </div>
         </div>
         </Box>

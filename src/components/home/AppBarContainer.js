@@ -91,7 +91,7 @@ function AppBarContainer() {
               <Box sx={{display: {xs: "none", sm: "none", md: "block", width: {xs: "30%", sm: "60%"}}}}>
                 {/* <Button variant="contained" sx={{pr:6, pl:6}}>Login</Button> */}
            
-                {isAuthenticated ? <Logout /> : <Login />  }
+                {/* {isAuthenticated ? <Logout /> : <Login />  } */}
               </Box>
               <Box sx={{display: "flex", justifyContent: "space-between", alignItems: "center", width: {xs: "70%", sm: "50%", md: "20%"}}}>
                 <img src={love} style={{width: "20px", height: "20px"}} alt="love"/>

@@ -56,7 +56,7 @@ function Popup(props) {
        setQuantity(0)
        setTimeout(() => {
         navigate("/savedproducts")
-       }, 2000)
+       }, 3000)
     }
     
     localStorage.setItem('userWant', JSON.stringify(final))
@@ -194,38 +194,6 @@ function Popup(props) {
     );
 }
 export default Popup;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -31,8 +31,12 @@ import PWSOFM2 from '../../images/PWSOFM2.png';
 import PWSOFM3 from '../../images/PWSOFM3.png';
 import PWSOFM4 from '../../images/PWSOFM4.png';
 
+
 import Popup from '../../components/Popup';
 
+
+
+import { useAuth0 } from '@auth0/auth0-react';
 
 
 
@@ -42,6 +46,7 @@ import Popup from '../../components/Popup';
 function Main() {
     //Using array method (filter) to fiter our array in Json folder
     const[products] = useState(futureProducts);
+
      const ourProduct = products.filter(product=>{
          return product.id < 4;
         })
@@ -61,6 +66,21 @@ function Main() {
     const [dialogData, setDiaogData] = useState(null)
     
    
+
+    const {  isAuthenticated, loginWithRedirect, isLoading } = useAuth0()
+   
+     const handleLoginCheck = () =>  {
+             if(!isAuthenticated){
+                loginWithRedirect()
+            }else {
+                 alert("all good")
+             }
+         }
+
+         if(isLoading){
+             return <div>Loading...</div>
+         }
+
         return ( 
         <>
             {/* First Grid Our products */}
@@ -91,6 +111,7 @@ function Main() {
                         <CardActions sx={{ width:"100%", display:"flex", flexDirection:"row", justifyContent:"space-between", alignContent:"end"}}>
                         {/* <FavoriteBorderIcon sx={{width:"19%", height:"19px"}}/> */}
                             
+
                             <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<FavoriteIcon sx={{color:"#B0B0B0"}}/>}> Save</Button>
                             <Button 
                                 variant="outlined" 
@@ -106,6 +127,10 @@ function Main() {
                                     setDiaogData(product)
                                 }}                                 > 
                                 Add to Cart </Button>
+
+                            <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<FavoriteIcon sx={{color:"#B0B0B0"}}/>} onClick={handleLoginCheck}> Save</Button>
+                            <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart </Button>
+
                             
                             
                         </CardActions>

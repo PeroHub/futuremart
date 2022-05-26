@@ -7,7 +7,7 @@ function ImageFrame({width, height, image}) {
           <Box sx={{ height:height, width:width,  background: "#0D08FF",  borderRadius: "50%", display: "flex", justifyContent:"center", alignItems: "center", p:4}}>
                
                     <Box sx={{width: "inherit", height: "inherit", borderRadius: "inherit", display: "flex", justifyContent:"center", alignItems: "center"}}>
-                         <img src={image} alt="cloth"/>
+                         <img src={image} style={{width: "150px", height: "150px"}} alt="cloth"/>
                
                     </Box>
           </Box>

@@ -23,7 +23,7 @@ import CWTU3 from '../../images/CWTU3.png';
 import CWTU4 from '../../images/CWTU4.png';
 
 // Seventh grid image
-import seventhgridimage from '../../images/seventhgridimage.png';
+// import seventhgridimage from '../../images/seventhgridimage.png';
 
 // People Who Shop On FutureMart Images
 import PWSOFM1 from '../../images/PWSOFM1.png';
@@ -31,18 +31,38 @@ import PWSOFM2 from '../../images/PWSOFM2.png';
 import PWSOFM3 from '../../images/PWSOFM3.png';
 import PWSOFM4 from '../../images/PWSOFM4.png';
 
+import Popup from '../../components/Popup';
+
+
+
 
 
 
 
 function Main() {
+    //Using array method (filter) to fiter our array in Json folder
     const[products] = useState(futureProducts);
-    // let size = 3
-    // let items = products.slice(0, size)
-    // console.log(items)
+     const ourProduct = products.filter(product=>{
+         return product.id < 4;
+        })
+     console.log(ourProduct)
+
+     const featuredProduct = products.filter(product=>{
+        return product.id > 3 ;
+       })
+
+    //Popup function
+       const [openPopup, setOpenPopup] = useState(false)
+    //    const handleClickOpen = () => {
+    //     setOpenPopup(true);
+    //   };
+
+    //DialogBox Function
+    const [dialogData, setDiaogData] = useState(null)
+    
+   
         return ( 
         <>
-            
             {/* First Grid Our products */}
             <Container maxWidth="lg" sx={{width:{xs:"100%", sm:"80%", md:"80%"}, mt: 8 }}>
                 <Box >
@@ -53,7 +73,7 @@ function Main() {
                 
                 <Grid container spacing={6} columns={12} mt={1} sx={{  display:"flex", flexDirection:"row", justifyContent:"center"}} >
                 
-                    {products.map((product) =>(
+                    {ourProduct.map((product) =>(
                     <Grid item xs={12} sm={12} md={4} key={product.id}>
                 
                         <Card xs={12} sx={{height:"45vh", textAlign:"end", backgroundColor:"#FAFAFA"}}>
@@ -72,7 +92,20 @@ function Main() {
                         {/* <FavoriteBorderIcon sx={{width:"19%", height:"19px"}}/> */}
                             
                             <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<FavoriteIcon sx={{color:"#B0B0B0"}}/>}> Save</Button>
-                            <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart </Button>
+                            <Button 
+                                variant="outlined" 
+                                size="small"  
+                                sx={{width:"46%",
+                                borderRadius:"3px",
+                                textTransform:"none", 
+                                fontSize:"75%",
+                                mt:{md:3.5} }} 
+                                startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>} 
+                                onClick={() => {
+                                    setOpenPopup(true)
+                                    setDiaogData(product)
+                                }}                                 > 
+                                Add to Cart </Button>
                             
                             
                         </CardActions>
@@ -82,9 +115,11 @@ function Main() {
                     </Grid>
                     ))} 
             </Grid>
+            
             <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
-                <ButtonMain variant={"outlined"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} /> 
+                <ButtonMain variant={"outlined"} width={"200px"} height={"50px"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} fontSize={"18px"}   /> 
             </Box>
+
 
             
             
@@ -180,7 +215,7 @@ function Main() {
                 
             <Grid container spacing={6} columns={12} mt={1} sx={{  display:"flex", flexDirection:"row", justifyContent:"center"}} >
                 
-            {products.map((product) =>(
+            {featuredProduct.map((product) =>(
                     <Grid item xs={12} sm={12} md={4} key={product.id}>
                 
                         <Card xs={12} sx={{height:"45vh", textAlign:"end", backgroundColor:"#FAFAFA"}}>
@@ -210,7 +245,7 @@ function Main() {
                     ))} 
             </Grid>
             <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
-                <ButtonMain variant={"outlined"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} /> 
+                <ButtonMain variant={"outlined"} width={"200px"} height={"50px"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} fontSize={"18px"} /> 
             </Box>
             {/* Fifth grid: Companies who trust us */}
             <Grid container columns={12} mt={15} sx={{display:"flex", flexDirection:"row", textAlign:"left", justifyContent:"center"}}>
@@ -355,7 +390,9 @@ function Main() {
             
                
         </Container>
-
+        <Button variant='contained' ></Button>
+        
+        <Popup openPopup={openPopup} dialogData={dialogData} setOpenPopup={setOpenPopup}></Popup>
 
 
                    

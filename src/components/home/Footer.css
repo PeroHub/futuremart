@@ -230,7 +230,12 @@ color: #FFFFFF;
     grid-template-columns: 1fr 1fr;
   }
 
-  .footer{
+  .final2{
+    display:block;
+  }
+
+  .final{
+    display: none;
   }
 
   .flex1 {

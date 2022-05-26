@@ -11,7 +11,6 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
-
 function Footer() {
   return (
     <Box mt={15}>
@@ -27,10 +26,7 @@ function Footer() {
               backgroundColor: "maroon",
             }}
           >
-            <div
-              className="menuBox"
-              
-            >
+            <div className="menuBox">
               <li
                 className="head"
                 style={{
@@ -251,7 +247,40 @@ function Footer() {
               </div>
             </div>
           </div>
-      
+          <div id="final2" style={{ display: "none" }}>
+            <div
+              id="finalFlex1"
+              style={{
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                id="logo"
+                src={footerLogo}
+                style={{
+                  marginLeft: "10px",
+                  width: "44px",
+                  height: "44px",
+                }}
+              ></img>
+            </div>
+
+            <div id="finalFlex2">
+              <Typography
+                id="copyright"
+                sx={{
+                  fontFamily: "Raleway",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  fontSize: "15px",
+                  color: "white",
+                }}
+              >
+                © Copyright 2007-2022 FutureMart. All rights reserved
+              </Typography>
+            </div>
+          </div>
         </div>
       </div>
     </Box>

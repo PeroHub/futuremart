@@ -141,7 +141,7 @@ function Main() {
                         </Avatar> 
                     </Box>
                     <br></br>
-                    <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
+                    <Typography>Signup here to kickstart your wonderful shopping experience with us. </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center"}} >
                     <Typography sx={{fontWeight:"bold", color:"#333333"}}>Shop</Typography>
@@ -154,7 +154,7 @@ function Main() {
                         </Avatar>
                     </Box>
                     <br></br>
-                    <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
+                    <Typography>We offer a secured environment with 24 hours customer service  to make your shopping experience easier while ensuring rapid response to your shopping needs.</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center"}} >
                     <Typography sx={{fontWeight:"bold", color:"#333333"}}>Check Out</Typography>
@@ -167,7 +167,7 @@ function Main() {
                         </Avatar>
                     </Box>
                     <br></br>
-                    <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
+                    <Typography>We offer the best discounts with a wide varienty of goods to choose from. </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center"}} >
                     <Typography sx={{fontWeight:"bold", color:"#333333"}}>Wait for Delivery </Typography>
@@ -180,7 +180,7 @@ function Main() {
                         </Avatar>
                     </Box>
                     <br></br>
-                    <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
+                    <Typography>We quarantee delivery within 48 hours after time of placing order. </Typography>
                 </Grid>
                 
             </Grid>

@@ -13,19 +13,18 @@ import { useNavigate, Link } from "react-router-dom"
 // import { BsFillHeartFill } from "react-icons/bs"
 
 import logo from '../../images/Logo.svg'
-import love from '../../images/Vector.png'
+
 import chart from '../../images/Chart.png'
 import profile from '../../images/profile.png'
 import Toggle from './Toggle';
-import Login from '../auth/Login';
-import Logout from '../auth/Logout';
+
 
 
 
 
 function AppBarContainer() {
 
-  const {  isAuthenticated } = useAuth0()
+ 
   let navigate = useNavigate()
   function redirect() {
     navigate("/")

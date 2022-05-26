@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from "react-router-dom"
 import { Container, Grid, Card, CardMedia, Button, Typography, Box } from '@mui/material';
 import { CardActions, Avatar } from '@mui/material';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ImageFrame from '../ImageFrame';
 import {futureProducts} from '../../products';
@@ -32,12 +31,11 @@ import PWSOFM2 from '../../images/PWSOFM2.png';
 import PWSOFM3 from '../../images/PWSOFM3.png';
 import PWSOFM4 from '../../images/PWSOFM4.png';
 
-
-import Popup from '../../components/Popup';
-
+import { useNavigate } from 'react-router-dom';
 
 
-import { useAuth0 } from '@auth0/auth0-react';
+
+
 
 
 
@@ -57,19 +55,15 @@ function Main() {
         return product.id > 3 ;
        })
 
-       const [openPopup, setOpenPopup] = useState(false)
        
-       const handleClose = () => {
-        setOpenPopup(false);
-      };
+       
+      
       
 
-      const handleOpen = () => {
-          setOpenPopup(true)
-      }
+     
 
     //DialogBox Function
-    const [dialogData, setDiaogData] = useState([])
+   
     
    
 
@@ -88,6 +82,7 @@ function Main() {
                 <Grid container spacing={6} columns={12} mt={1} sx={{  display:"flex", flexDirection:"row", justifyContent:"center"}} >
                 
                     {ourProduct.map((product) =>(
+                       
                     <Grid item xs={12} sm={12} md={4} key={product.id}>
                 
                         <Card xs={12} sx={{height:"45vh", textAlign:"end", backgroundColor:"#FAFAFA"}}>
@@ -106,21 +101,19 @@ function Main() {
                         {/* <FavoriteBorderIcon sx={{width:"19%", height:"19px"}}/> */}
                             
 
-                            
-                            <Button 
-                                variant="outlined" 
-                                size="small"  
-                                sx={{width:"46%",
-                                borderRadius:"3px",
-                                textTransform:"none", 
-                                fontSize:"75%",
-                                mt:{md:3.5} }} 
-                                startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>} 
-                                onClick={() => {
-                                    handleOpen()
-                                    setDiaogData(product)
-                                }}                                 > 
-                                Add to Cart </Button>
+                        
+                        <Button 
+                            variant="outlined" 
+                            size="small"  
+                            sx={{width:"46%",
+                            borderRadius:"3px",
+                            textTransform:"none", 
+                            fontSize:"75%",
+                            mt:{md:3.5} }} 
+                            startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart 
+                        </Button>
+                      
+                           
 
                            
                             

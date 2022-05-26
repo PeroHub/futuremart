@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {Dialog, DialogTitle, DialogContent, Container, Grid, Stack, Button} from '@mui/material'; 
 import { Typography, FormControl, Box, InputLabel, Select, MenuItem} from '@mui/material'; 
 import ImageFrame from '../components/ImageFrame';
 import ButtonMain from '../components/ButtonMain';
 // import {futureProducts} from '.././products';
+import { useNavigate } from 'react-router-dom';
 
 const initialState = {
     color: '',
@@ -48,11 +49,12 @@ function Popup(props) {
 
     const [ final, setFinal]   = useState([])
 
-    
+    let navigate = useNavigate()
    
     const handleAddToChart = () => {
         // validate that user has select what they want
         setFinal(dialogData)
+        navigate("/savedproducts")
        setQuantity(0)
     }
     

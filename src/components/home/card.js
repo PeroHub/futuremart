@@ -1,5 +1,5 @@
-import {Container, Grid, Card, Box, Stack, Typography} from '@mui/material';
-import { FormControl, InputLabel, Select, MenuItem} from '@mui/material'; 
+import {Container, Grid, Card, Box, Typography} from '@mui/material';
+// import { FormControl, InputLabel, Select, MenuItem} from '@mui/material'; 
 import ButtonMain from '../ButtonMain';
 function SavedProducts() {
     return(
@@ -7,7 +7,7 @@ function SavedProducts() {
             <Container maxWidth="lg" sx={{width:{xs:"100%", sm:"80%", md:"80%"}, mt: 8 }} >
                 <Grid container sx={{background:"#FAFCFD"}}>
                     <Grid item xs={6} md={12} sx={{border:"1px solid red", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", textAlign:"center", height:"60vh"}}>
-                        <Card sx={{display:"flex", height:"30vh", width:"60%", display:"flex" }}>
+                        <Card sx={{display:"flex", height:"30vh", width:"60%"}}>
                         <Box sx={{border:"1px solid blue", width:"100%", display:"flex", flexDirection:"row", justifyContent:"end"}}>    
                             <Box sx={{border:"1px solid red", width:"100%", display:"flex", flexDirection:"column", justifyContent:"space-between"}}>
                                 <Box sx={{textAlign:"left"}}>

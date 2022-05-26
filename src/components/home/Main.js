@@ -40,11 +40,11 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-import Popup from '../../components/Popup';
+// import Popup from '../../components/Popup';
 
 
 
-import { useAuth0 } from '@auth0/auth0-react';
+// import { useAuth0 } from '@auth0/auth0-react';
 
 
 
@@ -55,6 +55,11 @@ import { useAuth0 } from '@auth0/auth0-react';
 function Main() {
     //Using array method (filter) to fiter our array in Json folder
     const[products] = useState(futureProducts);
+
+    let navigate = useNavigate()
+    let handleNavi = () => {
+        navigate("/product")
+    }
 
      const ourProduct = products.filter(product=>{
          return product.id < 4;
@@ -79,17 +84,17 @@ function Main() {
    
 
     //Popup function
-       const [openPopup, setOpenPopup] = useState(false)
+    //    const [openPopup, setOpenPopup] = useState(false)
     //    const handleClickOpen = () => {
     //     setOpenPopup(true);
     //   };
 
     //DialogBox Function
-    const [dialogData, setDiaogData] = useState(null)
+    // const [dialogData, setDiaogData] = useState([])
     
    
 
-    const {  isAuthenticated, loginWithRedirect, isLoading } = useAuth0()
+    // const {  isAuthenticated, loginWithRedirect, isLoading } = useAuth0()
 
    
 
@@ -137,6 +142,7 @@ function Main() {
                             textTransform:"none", 
                             fontSize:"75%",
                             mt:{md:3.5} }} 
+                            onClick={handleNavi}
                             startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart 
                         </Button>
                       
@@ -144,24 +150,8 @@ function Main() {
 
                            
 
-                            <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<FavoriteIcon sx={{color:"#B0B0B0"}}/>}> Save</Button>
-                            <Button 
-                                variant="outlined" 
-                                size="small"  
-                                sx={{width:"46%",
-                                borderRadius:"3px",
-                                textTransform:"none", 
-                                fontSize:"75%",
-                                mt:{md:3.5} }} 
-                                startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>} 
-                                onClick={() => {
-                                    setOpenPopup(true)
-                                    setDiaogData(product)
-                                }}                                 > 
-                                Add to Cart </Button>
 
-                            <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<FavoriteIcon sx={{color:"#B0B0B0"}}/>} onClick={handleLoginCheck}> Save</Button>
-                            <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart </Button>
+                 
 
                             
 
@@ -482,7 +472,7 @@ function Main() {
 
         <Button variant='contained' ></Button>
         
-        <Popup openPopup={openPopup} dialogData={dialogData} setOpenPopup={setOpenPopup}></Popup>
+        {/* <Popup openPopup={openPopup} dialogData={dialogData} setOpenPopup={setOpenPopup}></Popup> */}
 
 
 

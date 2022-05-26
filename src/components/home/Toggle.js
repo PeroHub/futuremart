@@ -2,11 +2,11 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { FaAlignJustify } from "react-icons/fa";
 import { Link } from "react-router-dom"
-import Login from '../auth/Login';
-import Logout from '../auth/Logout';
-import { useAuth0 } from '@auth0/auth0-react';
+// import Login from '../auth/Login';
+// import Logout from '../auth/Logout';
+// import { useAuth0 } from '@auth0/auth0-react';
 function Toggle() {
-    const {  isAuthenticated } = useAuth0()
+    // const {  isAuthenticated } = useAuth0()
     return ( 
         <Box>
 

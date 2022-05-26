@@ -12,7 +12,7 @@ import Shipping from "./CheckoutComponent/Shipping";
 // import Payment from "./CheckoutComponent/Payment";
 import Review from "./CheckoutComponent/Review";
 import PersonalDetails from "./CheckoutComponent/PersonalDetails";
-import Stripe from "./Stripe"
+
 import FluterwaveButton from "./FlutterwaveButton";
 
 const steps = [
@@ -50,10 +50,8 @@ function CheckoutPage() {
     };
 
 
-    let result = localStorage.getItem('userWant')
-    JSON.parse(result).map(item => {
-      console.log(item.prev.prev.prev)
-    }) 
+    // let result = localStorage.getItem('userWant')
+    
     return ( 
        <>
         <Box sx={{ display: {xs: "block", md: "grid"}, gridTemplateColumns: "1fr 1fr", width: {xs: "100%", md: "80%"}, margin: "0 auto"}}>

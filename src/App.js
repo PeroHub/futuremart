@@ -7,6 +7,7 @@ import Home from './components/home/Home';
 import Product from './components/products/Product';
 import Error from "./components/Error"
 import CheckoutPage from './components/CheckoutPage';
+import SavedProducts from './components/home/card';
 
 
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="/product" element={<Product />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="*" element={<Error />}/>
+        <Route path="savedproducts" element={<SavedProducts />}/>
       </Routes>
       </ThemeProvider>
     </div>

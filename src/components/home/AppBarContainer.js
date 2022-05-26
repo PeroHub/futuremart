@@ -7,7 +7,7 @@ import Container from '@mui/material/Container';
 // import Button from '@mui/material/Button';
 
 
-import { useAuth0 } from '@auth0/auth0-react';
+
 import { useNavigate, Link } from "react-router-dom"
 
 // import { BsFillHeartFill } from "react-icons/bs"

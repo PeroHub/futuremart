@@ -13,7 +13,7 @@ import {
 
 function Footer() {
   return (
-    <Box mt={15}>
+    <Box  mt={10}>
       <div className="footer">
         <div className="holder">
           <div

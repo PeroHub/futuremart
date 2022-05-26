@@ -3,12 +3,13 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 // import { futureTheme } from "./theme"
-import Home from "./components/home/Home";
-import Product from "./components/products/Product";
-import AboutFuturemart from "./components/AboutFuturemart";
-import ErrPage from "./components/ErrPage";
-import Cart from "./components/Cart";
-import Footer from "./components/home/Footer";
+import Home from './components/home/Home';
+import Product from './components/products/Product';
+import Error from "./components/ErrPage"
+import CheckoutPage from './components/CheckoutPage';
+import SavedProducts from './components/home/card';
+
+
 
 const theme = createTheme({
   palette: {
@@ -30,14 +31,13 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/about" element={<AboutFuturemart />} />
-          <Route path="*" element={<ErrPage />} />
-          <Route path="/footer" element={<Footer />} />
-          <Route path="/checkout" element={<Cart />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="*" element={<ErrPage />}/>
+        <Route path="savedproducts" element={<SavedProducts />}/>
+      </Routes>
       </ThemeProvider>
     </div>
   );

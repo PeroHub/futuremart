@@ -9,7 +9,12 @@ import { Link } from "react-router-dom";
 
 
 import { useAuth0 } from '@auth0/auth0-react';
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
+=======
+import { useNavigate, Link } from "react-router-dom"
+
+>>>>>>> 886f285fea0440ccd58555eddcb6c05917bacb61
 // import { BsFillHeartFill } from "react-icons/bs"
 
 import logo from '../../images/Logo.svg'
@@ -59,6 +64,7 @@ function AppBarContainer() {
           >
             <img alt="logo" src={logo} onClick={redirect} />
           </IconButton>
+<<<<<<< HEAD
 
           <Box
             sx={{
@@ -69,10 +75,30 @@ function AppBarContainer() {
               flexGrow: { xs: 1, sm: 0, md: 0 },
             }}
           >
+=======
+          
+          <Box sx={{display: {xs: "none", sm: "none", md: "flex"}, justifyContent: "space-evenly", alignItems: "center", width: "30%", flexGrow: {xs: 1, sm:0, md: 0}}}>
+              <Link to="/product">
+                  <Typography
+                  noWrap
+                  component="a"
+                  href="/"
+                  sx={{
+                    display: { xs: 'none', md: 'flex' },
+                    color: 'black',
+                    textDecoration: 'none',
+                  }}
+                >
+                  Products
+                </Typography>
+              </Link>
+              
+>>>>>>> 886f285fea0440ccd58555eddcb6c05917bacb61
             <Typography
               noWrap
               component="a"
               href="/"
+<<<<<<< HEAD
               sx={{
                 display: { xs: "none", md: "flex" },
                 color: "black",
@@ -109,6 +135,8 @@ function AppBarContainer() {
             }}
           >
             <Box
+=======
+>>>>>>> 886f285fea0440ccd58555eddcb6c05917bacb61
               sx={{
                 color: "black",
                 display: "flex",

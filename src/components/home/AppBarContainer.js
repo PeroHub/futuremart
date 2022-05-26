@@ -94,7 +94,7 @@ function AppBarContainer() {
                 {/* {isAuthenticated ? <Logout /> : <Login />  } */}
               </Box>
               <Box sx={{display: "flex", justifyContent: "space-between", alignItems: "center", width: {xs: "70%", sm: "50%", md: "20%"}}}>
-                <img src={love} style={{width: "20px", height: "20px"}} alt="love"/>
+                {/* <img src={love} style={{width: "20px", height: "20px"}} alt="love"/> */}
                 <img src={chart} style={{width: "20px", height: "20px"}} alt="chart" />
                 <img src={profile} style={{width: "20px", height: "20px"}} alt="profile" />
               </Box>

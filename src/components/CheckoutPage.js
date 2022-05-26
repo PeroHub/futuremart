@@ -48,10 +48,18 @@ function CheckoutPage() {
     const handleReset = () => {
       setActiveStep(0);
     };
+
+
+    let result = localStorage.getItem('userWant')
+    JSON.parse(result).map(item => {
+      console.log(item.prev.prev.prev)
+    }) 
     return ( 
        <>
         <Box sx={{ display: {xs: "block", md: "grid"}, gridTemplateColumns: "1fr 1fr", width: {xs: "100%", md: "80%"}, margin: "0 auto"}}>
-            <Box sx={{order: 2}}>Chart section</Box>
+            <Box sx={{order: 2}}>
+              
+            </Box>
             <Box sx={{ maxWidth: {xs: "100%", md: "100%"}, border: "1px solid red" }}>
                     <Stepper activeStep={activeStep} orientation="vertical">
                         {steps.map((step, index) => (

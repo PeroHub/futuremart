@@ -31,14 +31,42 @@ import PWSOFM2 from '../../images/PWSOFM2.png';
 import PWSOFM3 from '../../images/PWSOFM3.png';
 import PWSOFM4 from '../../images/PWSOFM4.png';
 
+
+import Popup from '../../components/Popup';
+
+
+
 import { useAuth0 } from '@auth0/auth0-react';
 
 
 
 
 
+
 function Main() {
+    //Using array method (filter) to fiter our array in Json folder
     const[products] = useState(futureProducts);
+
+     const ourProduct = products.filter(product=>{
+         return product.id < 4;
+        })
+     console.log(ourProduct)
+
+     const featuredProduct = products.filter(product=>{
+        return product.id > 3 ;
+       })
+
+    //Popup function
+       const [openPopup, setOpenPopup] = useState(false)
+    //    const handleClickOpen = () => {
+    //     setOpenPopup(true);
+    //   };
+
+    //DialogBox Function
+    const [dialogData, setDiaogData] = useState(null)
+    
+   
+
     const {  isAuthenticated, loginWithRedirect, isLoading } = useAuth0()
    
      const handleLoginCheck = () =>  {
@@ -55,7 +83,6 @@ function Main() {
 
         return ( 
         <>
-            
             {/* First Grid Our products */}
             <Container maxWidth="lg" sx={{width:{xs:"100%", sm:"80%", md:"80%"}, mt: 8 }}>
                 <Box >
@@ -66,7 +93,7 @@ function Main() {
                 
                 <Grid container spacing={6} columns={12} mt={1} sx={{  display:"flex", flexDirection:"row", justifyContent:"center"}} >
                 
-                    {products.map((product) =>(
+                    {ourProduct.map((product) =>(
                     <Grid item xs={12} sm={12} md={4} key={product.id}>
                 
                         <Card xs={12} sx={{height:"45vh", textAlign:"end", backgroundColor:"#FAFAFA"}}>
@@ -84,8 +111,26 @@ function Main() {
                         <CardActions sx={{ width:"100%", display:"flex", flexDirection:"row", justifyContent:"space-between", alignContent:"end"}}>
                         {/* <FavoriteBorderIcon sx={{width:"19%", height:"19px"}}/> */}
                             
+
+                            <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<FavoriteIcon sx={{color:"#B0B0B0"}}/>}> Save</Button>
+                            <Button 
+                                variant="outlined" 
+                                size="small"  
+                                sx={{width:"46%",
+                                borderRadius:"3px",
+                                textTransform:"none", 
+                                fontSize:"75%",
+                                mt:{md:3.5} }} 
+                                startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>} 
+                                onClick={() => {
+                                    setOpenPopup(true)
+                                    setDiaogData(product)
+                                }}                                 > 
+                                Add to Cart </Button>
+
                             <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<FavoriteIcon sx={{color:"#B0B0B0"}}/>} onClick={handleLoginCheck}> Save</Button>
                             <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart </Button>
+
                             
                             
                         </CardActions>
@@ -95,9 +140,11 @@ function Main() {
                     </Grid>
                     ))} 
             </Grid>
+            
             <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
-                <ButtonMain variant={"outlined"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} /> 
+                <ButtonMain variant={"outlined"} width={"200px"} height={"50px"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} fontSize={"18px"}   /> 
             </Box>
+
 
             
             
@@ -119,7 +166,7 @@ function Main() {
                         </Avatar> 
                     </Box>
                     <br></br>
-                    <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
+                    <Typography>Signup here to kickstart your wonderful shopping experience with us. </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center"}} >
                     <Typography sx={{fontWeight:"bold", color:"#333333"}}>Shop</Typography>
@@ -132,7 +179,7 @@ function Main() {
                         </Avatar>
                     </Box>
                     <br></br>
-                    <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
+                    <Typography>We offer a secured environment with 24 hours customer service  to make your shopping experience easier while ensuring rapid response to your shopping needs.</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center"}} >
                     <Typography sx={{fontWeight:"bold", color:"#333333"}}>Check Out</Typography>
@@ -145,7 +192,7 @@ function Main() {
                         </Avatar>
                     </Box>
                     <br></br>
-                    <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
+                    <Typography>We offer the best discounts with a wide varienty of goods to choose from. </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center"}} >
                     <Typography sx={{fontWeight:"bold", color:"#333333"}}>Wait for Delivery </Typography>
@@ -158,7 +205,7 @@ function Main() {
                         </Avatar>
                     </Box>
                     <br></br>
-                    <Typography>Lorem ipsum dolor sit aur <br/> adipiscing elit, sed do eid <br/> incididunt ut labore</Typography>
+                    <Typography>We quarantee delivery within 48 hours after time of placing order. </Typography>
                 </Grid>
                 
             </Grid>
@@ -193,7 +240,7 @@ function Main() {
                 
             <Grid container spacing={6} columns={12} mt={1} sx={{  display:"flex", flexDirection:"row", justifyContent:"center"}} >
                 
-            {products.map((product) =>(
+            {featuredProduct.map((product) =>(
                     <Grid item xs={12} sm={12} md={4} key={product.id}>
                 
                         <Card xs={12} sx={{height:"45vh", textAlign:"end", backgroundColor:"#FAFAFA"}}>
@@ -223,7 +270,7 @@ function Main() {
                     ))} 
             </Grid>
             <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
-                <ButtonMain variant={"outlined"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} /> 
+                <ButtonMain variant={"outlined"} width={"200px"} height={"50px"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} fontSize={"18px"} /> 
             </Box>
             {/* Fifth grid: Companies who trust us */}
             <Grid container columns={12} mt={15} sx={{display:"flex", flexDirection:"row", textAlign:"left", justifyContent:"center"}}>
@@ -368,7 +415,9 @@ function Main() {
             
                
         </Container>
-
+        <Button variant='contained' ></Button>
+        
+        <Popup openPopup={openPopup} dialogData={dialogData} setOpenPopup={setOpenPopup}></Popup>
 
 
                    

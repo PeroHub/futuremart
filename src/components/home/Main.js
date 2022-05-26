@@ -46,6 +46,11 @@ function Main() {
     //Using array method (filter) to fiter our array in Json folder
     const[products] = useState(futureProducts);
 
+    let navigate = useNavigate()
+    let handleNavi = () => {
+        navigate("/product")
+    }
+
      const ourProduct = products.filter(product=>{
          return product.id < 4;
         })
@@ -110,6 +115,7 @@ function Main() {
                             textTransform:"none", 
                             fontSize:"75%",
                             mt:{md:3.5} }} 
+                            onClick={handleNavi}
                             startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart 
                         </Button>
                       

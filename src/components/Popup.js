@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import {Dialog, DialogTitle, DialogContent, Container, Grid, Stack, Button} from '@mui/material'; 
+import {Dialog, DialogTitle, DialogContent, Grid, Stack, Button} from '@mui/material'; 
 import { Typography, FormControl, Box, InputLabel, Select, MenuItem} from '@mui/material'; 
 import ImageFrame from '../components/ImageFrame';
-import ButtonMain from '../components/ButtonMain';
 // import {futureProducts} from '.././products';
 import { useNavigate } from 'react-router-dom';
 
@@ -41,8 +40,7 @@ function Popup(props) {
     dialogData.size = userWant.size
     dialogData.quantity = quantity
 
-    let arr = []
-    arr = dialogData
+  
     
   
  
@@ -54,8 +52,11 @@ function Popup(props) {
     const handleAddToChart = () => {
         // validate that user has select what they want
         setFinal(dialogData)
-        navigate("/savedproducts")
+        
        setQuantity(0)
+       setTimeout(() => {
+        navigate("/savedproducts")
+       }, 2000)
     }
     
     localStorage.setItem('userWant', JSON.stringify(final))

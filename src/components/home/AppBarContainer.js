@@ -13,19 +13,18 @@ import { useNavigate, Link } from "react-router-dom"
 // import { BsFillHeartFill } from "react-icons/bs"
 
 import logo from '../../images/Logo.svg'
-import love from '../../images/Vector.png'
+
 import chart from '../../images/Chart.png'
 import profile from '../../images/profile.png'
 import Toggle from './Toggle';
-import Login from '../auth/Login';
-import Logout from '../auth/Logout';
+
 
 
 
 
 function AppBarContainer() {
 
-  const {  isAuthenticated } = useAuth0()
+ 
   let navigate = useNavigate()
   function redirect() {
     navigate("/")
@@ -91,10 +90,10 @@ function AppBarContainer() {
               <Box sx={{display: {xs: "none", sm: "none", md: "block", width: {xs: "30%", sm: "60%"}}}}>
                 {/* <Button variant="contained" sx={{pr:6, pl:6}}>Login</Button> */}
            
-                {isAuthenticated ? <Logout /> : <Login />  }
+                {/* {isAuthenticated ? <Logout /> : <Login />  } */}
               </Box>
               <Box sx={{display: "flex", justifyContent: "space-between", alignItems: "center", width: {xs: "70%", sm: "50%", md: "20%"}}}>
-                <img src={love} style={{width: "20px", height: "20px"}} alt="love"/>
+                {/* <img src={love} style={{width: "20px", height: "20px"}} alt="love"/> */}
                 <img src={chart} style={{width: "20px", height: "20px"}} alt="chart" />
                 <img src={profile} style={{width: "20px", height: "20px"}} alt="profile" />
               </Box>

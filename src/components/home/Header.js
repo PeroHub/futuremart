@@ -83,7 +83,7 @@ function Header({bangle}) {
                         </Box>
                     </Box>
                     <Box sx={{display: {xs: "none", md: "flex"}, flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
-                       <ImageFrame width={"300px"} height={"300px"} image={rightImg}  />
+                       <ImageFrame width={"200px"} height={"200px"} image={rightImg}  />
                     </Box>
                 </Box>
                

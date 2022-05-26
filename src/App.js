@@ -35,7 +35,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
         <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="*" element={<ErrPage />}/>
+        <Route path="*" element={<Error />}/>
         <Route path="savedproducts" element={<SavedProducts />}/>
       </Routes>
       </ThemeProvider>

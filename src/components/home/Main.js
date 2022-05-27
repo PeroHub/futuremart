@@ -173,9 +173,9 @@ function Main() {
 
 
             
-            <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
+            {/* <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
                 <ButtonMain variant={"outlined"} width={"200px"} height={"50px"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} fontSize={"18px"}   /> 
-            </Box>
+            </Box> */}
 
 
 
@@ -318,9 +318,9 @@ function Main() {
             </Link>
             
 
-            <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
+            {/* <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
                 <ButtonMain variant={"outlined"} width={"200px"} height={"50px"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} fontSize={"18px"} /> 
-            </Box>
+            </Box> */}
 
             {/* Fifth grid: Companies who trust us */}
             <Grid container columns={12} mt={15} sx={{display:"flex", flexDirection:"row", textAlign:"left", justifyContent:"center"}}>
@@ -470,7 +470,7 @@ function Main() {
         
         {/* <Popup openPopup={openPopup} dialogData={dialogData} setOpenPopup={setOpenPopup} handleClose={handleClose}></Popup> */}
 
-        <Button variant='contained' ></Button>
+       
         
         {/* <Popup openPopup={openPopup} dialogData={dialogData} setOpenPopup={setOpenPopup}></Popup> */}
 

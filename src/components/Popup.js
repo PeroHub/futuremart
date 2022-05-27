@@ -53,10 +53,10 @@ function Popup(props) {
         // validate that user has select what they want
         setFinal(dialogData)
         
-       setQuantity(0)
+       
        setTimeout(() => {
         navigate("/savedproducts")
-       }, 3000)
+       }, 2000)
     }
     
     localStorage.setItem('userWant', JSON.stringify(final))

@@ -5,14 +5,21 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 export default function App() {
+
+const user = localStorage.getItem('userData')
+const value = JSON.parse(user)
+let result = localStorage.getItem('userWant')
+const item = JSON.parse(result)
+
   const config = {
     public_key: 'FLWPUBK_TEST-b434ac7a4afa5a1dfb4febac87fc301e-X',
     tx_ref: Date.now(),
-    amount: 100,
+    amount: 200,
     currency: 'NGN',
     payment_options: 'card,mobilemoney,ussd',
+    redirect_url: '/',
     customer: {
-      email: 'user@gmail.com',
+      email: value.email,
       phonenumber: '07064586146',
       name: 'joel ugwumadu',
     },
@@ -28,7 +35,7 @@ export default function App() {
   return (
     <div className="App">
      <Box sx={{background:'#ED8204', textAlign: "center", p:2, color: "#fff"}}>
-            <Typography>Total Price</Typography>
+            <Typography>Total Price {item.price}</Typography>
             <Typography sx={{fontSize: "2rem"}}>Payment</Typography>
         </Box>
 

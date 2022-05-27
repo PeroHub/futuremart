@@ -67,6 +67,7 @@ function Product() {
                             variant="outlined" 
                             size="small"  
                             sx={{width:"46%",
+                            margin: "0 auto",
                             borderRadius:"3px",
                             textTransform:"none", 
                             fontSize:"75%",

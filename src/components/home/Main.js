@@ -138,6 +138,7 @@ function Main() {
                             variant="outlined" 
                             size="small"  
                             sx={{width:"46%",
+                            margin: "0 auto",
                             borderRadius:"3px",
                             textTransform:"none", 
                             fontSize:"75%",
@@ -173,9 +174,9 @@ function Main() {
 
 
             
-            <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
+            {/* <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
                 <ButtonMain variant={"outlined"} width={"200px"} height={"50px"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} fontSize={"18px"}   /> 
-            </Box>
+            </Box> */}
 
 
 
@@ -300,7 +301,18 @@ function Main() {
                         {/* <FavoriteBorderIcon sx={{width:"19%", height:"19px"}}/> */}
                             
                           
-                            <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart </Button>
+                        <Button 
+                            variant="outlined" 
+                            size="small"  
+                            sx={{width:"46%",
+                            margin: "0 auto",
+                            borderRadius:"3px",
+                            textTransform:"none", 
+                            fontSize:"75%",
+                            mt:{md:3.5} }} 
+                            onClick={handleNavi}
+                            startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart 
+                        </Button>
                             
                             
                         </CardActions>
@@ -318,9 +330,9 @@ function Main() {
             </Link>
             
 
-            <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
+            {/* <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
                 <ButtonMain variant={"outlined"} width={"200px"} height={"50px"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} fontSize={"18px"} /> 
-            </Box>
+            </Box> */}
 
             {/* Fifth grid: Companies who trust us */}
             <Grid container columns={12} mt={15} sx={{display:"flex", flexDirection:"row", textAlign:"left", justifyContent:"center"}}>
@@ -470,7 +482,7 @@ function Main() {
         
         {/* <Popup openPopup={openPopup} dialogData={dialogData} setOpenPopup={setOpenPopup} handleClose={handleClose}></Popup> */}
 
-        <Button variant='contained' ></Button>
+       
         
         {/* <Popup openPopup={openPopup} dialogData={dialogData} setOpenPopup={setOpenPopup}></Popup> */}
 

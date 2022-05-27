@@ -50,7 +50,7 @@ function CheckoutPage() {
     };
 
 
-    // let result = localStorage.getItem('userWant')
+    
     
     return ( 
        <>

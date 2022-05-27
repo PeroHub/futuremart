@@ -1,7 +1,16 @@
-import {Container, Grid, Card, Box, Typography} from '@mui/material';
+import {Container, Grid, Card, Box, Typography, Button} from '@mui/material';
 // import { FormControl, InputLabel, Select, MenuItem} from '@mui/material'; 
 import ButtonMain from '../ButtonMain';
+import { useNavigate } from 'react-router-dom';
 function SavedProducts() {
+    let result = localStorage.getItem('userWant')
+    let final = JSON.parse(result)
+    console.log(final)
+
+    const navigate = useNavigate()
+    const handleNav = () => {
+        navigate("/checkout")
+    }
     return(
         <>
             <Container maxWidth="lg" sx={{width:{xs:"100%", sm:"80%", md:"80%"}, mt: 8 }} >
@@ -11,17 +20,20 @@ function SavedProducts() {
                         <Box sx={{border:"1px solid blue", width:"100%", display:"flex", flexDirection:"row", justifyContent:"end"}}>    
                             <Box sx={{border:"1px solid red", width:"100%", display:"flex", flexDirection:"column", justifyContent:"space-between"}}>
                                 <Box sx={{textAlign:"left"}}>
-                                    <Typography variant="h5" sx={{fontWeight:"3rem", border:"1px solid red"}}>FutureLabs Polo</Typography>
+                                    <Typography variant="h5" sx={{fontWeight:"3rem", border:"1px solid red"}}>{final.cetegory}</Typography>
                                     <Box sx={{border:"1px solid red" }}>
                                         <Grid container>
                                             <Grid item xs={1} md={6}>
-                                                <Typography variant="p" sx={{fontWeight:"3rem"}}>(Black)</Typography>
+                                                <Typography variant="p" sx={{fontWeight:"3rem"}}>{final.category}</Typography>
 
                                             </Grid>
+                                            
                                             <Grid item xs={1} md={6} sx={{ mt:{xs:5, sm:0, md:0} }}>
-                                                <ButtonMain variant={"outlined"}  bg={"#FAFCFD"} text={"1"} height={"10px"} size={"3"} border={"#CCCCCC"} width={"0px"}/>
-
+                                                
+                                               
                                             </Grid>
+                                            
+                                            <img src={final.image} alt="cloth" />
                                         </Grid>    
                                     </Box>
 
@@ -30,8 +42,9 @@ function SavedProducts() {
 
                                 <Box sx={{border:"1px solid red", width:"100%", display:"flex", alignItems:"end" }}>
                                     <Box sx={{border:"1px solid red", display:"flex", width:"100%", justifyContent:"space-between"}}>
-                                        <ButtonMain variant={"text"} size={"medium"} width={"5rem"} height={"45px"} color={"red"} text={"REMOVE"}/>
-                                        <ButtonMain variant={"text"} size={"medium"} width={"5rem"} height={"45px"} color={"#949494"} text={"N2000"}/>
+                                        
+                                        <Button sx={{background: "red"}} variant="contained">REMOVE</Button>
+                                        <Button>{final.price}</Button>
 
                                     </Box>
                                 </Box>
@@ -41,7 +54,8 @@ function SavedProducts() {
                         </Box>
                         </Card>
                         <Box mt={5}>
-                        <ButtonMain variant={"contained"} size={"medium"} width={"10rem"} height={"45px"} mt={"5px"} text={"Add to Cart"}/>
+                        <ButtonMain variant={"contained"} size={"medium"} width={"10rem"} height={"45px"} mt={"5px"} text={"Procedd to Checkout"}/>
+                        <Button onClick={handleNav}>Proceed To Checkout</Button>
                         </Box>
 
 

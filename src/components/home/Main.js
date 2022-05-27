@@ -138,6 +138,7 @@ function Main() {
                             variant="outlined" 
                             size="small"  
                             sx={{width:"46%",
+                            margin: "0 auto",
                             borderRadius:"3px",
                             textTransform:"none", 
                             fontSize:"75%",
@@ -300,7 +301,18 @@ function Main() {
                         {/* <FavoriteBorderIcon sx={{width:"19%", height:"19px"}}/> */}
                             
                           
-                            <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart </Button>
+                        <Button 
+                            variant="outlined" 
+                            size="small"  
+                            sx={{width:"46%",
+                            margin: "0 auto",
+                            borderRadius:"3px",
+                            textTransform:"none", 
+                            fontSize:"75%",
+                            mt:{md:3.5} }} 
+                            onClick={handleNavi}
+                            startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart 
+                        </Button>
                             
                             
                         </CardActions>

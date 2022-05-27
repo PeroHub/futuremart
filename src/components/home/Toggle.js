@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import { FaAlignJustify } from "react-icons/fa";
 import { Link } from "react-router-dom"
 // import Login from '../auth/Login';
@@ -22,32 +22,32 @@ function Toggle() {
             <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
             <Box >
               <Link to="/product">
-                  <Typography
+                  <Button
                   noWrap
                   component="a"
-                  href="/"
+                  
                   sx={{
-                    display: { xs: 'none', md: 'flex' },
                     color: 'black',
                     textDecoration: 'none',
                   }}
                 >
                   Products
-                </Typography>
+                </Button>
               </Link>
               
-            <Typography
+            <Button
               noWrap
               component="a"
-              href="/"
+              
               sx={{
-                display: { xs: 'none', md: 'flex' },
+                mt: 2,
+                display: { xs: 'block'},
                 color: 'black',
                 textDecoration: 'none',
               }}
             >
               About FutureMart
-            </Typography>
+            </Button>
           </Box>
             </div>
         </div>

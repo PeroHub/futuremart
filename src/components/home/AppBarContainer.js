@@ -1,8 +1,8 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 // import Button from '@mui/material/Button';
 
@@ -39,7 +39,7 @@ function AppBarContainer() {
 // }
   
     return ( 
-        <AppBar position="static" sx={{background: "#fff"}}>
+        <AppBar position="static" sx={{background: "#FBFBFB", boxShadow: "none"}}>
       <Container maxWidth="xl" sx={{ width: {xs: "100%", sm: "80%", md: "80%"}, display: "flex", justifyContent: "space-between"}}>
         
           <IconButton sx={{display: "flex", justifyContent: "center", alignItems: "center", flexGrow: {xs: 1, sm:0, md: 0}}}>
@@ -52,7 +52,7 @@ function AppBarContainer() {
           
           <Box sx={{display: {xs: "none", sm: "none", md: "flex"}, justifyContent: "space-evenly", alignItems: "center", width: "30%", flexGrow: {xs: 1, sm:0, md: 0}}}>
               <Link to="/product">
-                  <Typography
+                  <Button
                   noWrap
                   component="a"
                   href="/"
@@ -63,10 +63,10 @@ function AppBarContainer() {
                   }}
                 >
                   Products
-                </Typography>
+                </Button>
               </Link>
               
-            <Typography
+            <Button
               noWrap
               component="a"
               href="/"
@@ -77,7 +77,7 @@ function AppBarContainer() {
               }}
             >
               About FutureMart
-            </Typography>
+            </Button>
           </Box>
 
           
@@ -85,14 +85,14 @@ function AppBarContainer() {
          
           <Box sx={{width: "50%", display: "flex", gridTemplateColumns: "1fr 1fr",  justifyContent: "center", alignItems: "center" }}>
             
-            <Box sx={{color: "black", display: "flex", justifyContent: "space-evenly", width: "100%"}}>
+            <Box sx={{color: "black", display: "flex", justifyContent: "space-between", width: "100%"}}>
               {/* <BsFillHeartFill /> */}
               <Box sx={{display: {xs: "none", sm: "none", md: "block", width: {xs: "30%", sm: "60%"}}}}>
                 {/* <Button variant="contained" sx={{pr:6, pl:6}}>Login</Button> */}
            
                 {/* {isAuthenticated ? <Logout /> : <Login />  } */}
               </Box>
-              <Box sx={{display: "flex", justifyContent: "space-between", alignItems: "center", width: {xs: "70%", sm: "50%", md: "20%"}}}>
+              <Box sx={{display: "flex", justifyContent: "space-between",  alignItems: "center", position: "relative", left: "45px", width: {xs: "50%", sm: "50%", md: "20%"}}}>
                 {/* <img src={love} style={{width: "20px", height: "20px"}} alt="love"/> */}
                 <img src={chart} style={{width: "20px", height: "20px"}} alt="chart" />
                 <img src={profile} style={{width: "20px", height: "20px"}} alt="profile" />

@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 // import ButtonMain from "../ButtonMain"
-import ImageFrame from '../ImageFrame';
+// import ImageFrame from '../ImageFrame';
 // import me from "../../images/Tshirt.png"
 import "./header.css"
 // import Login from '../auth/Login';
@@ -83,7 +83,11 @@ function Header({bangle}) {
                         </Box>
                     </Box>
                     <Box sx={{display: {xs: "none", md: "flex"}, justifyContent: "end", alignItems: "center"}}>
-                       <ImageFrame width={"200px"} height={"200px"}  image={rightImg}  />
+                       {/* <ImageFrame width={"200px"} height={"200px"}  image={rightImg}  /> */}
+                       <Box sx={{width: "300px", height: "300px", borderRadius: "50%", background: "blue", p: 2, display: "flex", justifyContent: "center", alignItems: "center"}}>
+                           <img src={rightImg} style={{width: "inherit"}} alt="header" />
+
+                       </Box>
                     </Box>
                 </Box>
                

@@ -39,7 +39,7 @@ function AppBarContainer() {
 // }
   
     return ( 
-        <AppBar position="static" sx={{background: "#fff"}}>
+        <AppBar position="static" sx={{background: "#FBFBFB", boxShadow: "none"}}>
       <Container maxWidth="xl" sx={{ width: {xs: "100%", sm: "80%", md: "80%"}, display: "flex", justifyContent: "space-between"}}>
         
           <IconButton sx={{display: "flex", justifyContent: "center", alignItems: "center", flexGrow: {xs: 1, sm:0, md: 0}}}>
@@ -92,7 +92,7 @@ function AppBarContainer() {
            
                 {/* {isAuthenticated ? <Logout /> : <Login />  } */}
               </Box>
-              <Box sx={{display: "flex", justifyContent: "space-between",  alignItems: "center", marginLeft: "20px", width: {xs: "70%", sm: "50%", md: "10%"}}}>
+              <Box sx={{display: "flex", justifyContent: "space-between",  alignItems: "center", position: "relative", left: "45px", width: {xs: "50%", sm: "50%", md: "20%"}}}>
                 {/* <img src={love} style={{width: "20px", height: "20px"}} alt="love"/> */}
                 <img src={chart} style={{width: "20px", height: "20px"}} alt="chart" />
                 <img src={profile} style={{width: "20px", height: "20px"}} alt="profile" />

@@ -296,10 +296,31 @@ function Main() {
                         <Card sx={{height:"17vh"}}>
                         <Typography mt={2} sx={{textAlign:"center", fontFamily:"Quando", color:"#333333", fontSize:"1rem", lineHeight:{md:"1.5rem"}, fontWeight:"bold"}}>{product.cetegory}</Typography>
                         <CardActions sx={{ width:"100%", display:"flex", flexDirection:"row", justifyContent:"space-between", alignContent:"end"}}>
-                        {/* <FavoriteBorderIcon sx={{width:"19%", height:"19px"}}/> */}
+                            <Button
+                                variant="outlined" 
+                                size="small"  
+                                sx={{width:"46%",
+                                borderRadius:"3px",
+                                textTransform:"none", 
+                                fontSize:"75%",
+                                mt:{md:3.5} }}
+                                startIcon={<FavoriteIcon sx={{color:"#B0B0B0"}}/>}>Save                             
+                            </Button>
+                                
+
+
                             
-                          
-                            <Button variant="outlined" size="small" disabled sx={{width:"46%", borderRadius:"3px", textTransform:"none", fontSize:"75%", mt:{md:3.5} }} startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart </Button>
+                            <Button 
+                                variant="outlined" 
+                                size="small"  
+                                sx={{width:"46%",
+                                borderRadius:"3px",
+                                textTransform:"none", 
+                                fontSize:"75%",
+                                mt:{md:3.5} }} 
+                                onClick={handleNavi}
+                                startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart 
+                            </Button>
                             
                             
                         </CardActions>

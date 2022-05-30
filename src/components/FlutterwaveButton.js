@@ -17,6 +17,7 @@ const item = JSON.parse(result)
     amount: 200,
     currency: 'NGN',
     payment_options: 'card,mobilemoney,ussd',
+    redirect_url: '/',
     customer: {
       email: value.email,
       phonenumber: '07064586146',

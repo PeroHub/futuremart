@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 
 
-function SavedProducts() {
+function Cardcomponent() {
     let result = localStorage.getItem('userWant')
     let final = JSON.parse(result)
     console.log(final)
@@ -36,13 +36,21 @@ function SavedProducts() {
                                     <Table sx={{border:"6x solid red", height:"100%", display:"flex", flexDirection:"column" }}>
                                         <TableHead sx={{border:"6x solid blue", width:"100%"}}>
                                             <TableRow sx={{border:"6x solid blue", width:"100%"}}>
-                                                <TableCell sx={{borderBottom:"none"}}><Typography variant="h5" sx={{fontWeight:"3rem", border:"1px solid red"}}>FutureLabs Polo</Typography></TableCell>
+                                                <TableCell sx={{borderBottom:"none"}}><Typography variant="h5" sx={{fontWeight:"3rem", border:"1px solid red"}}>{final.cetegory}</Typography></TableCell>
                                             </TableRow> 
                                         </TableHead>
                                         <TableBody sx={{border:"6x solid blue", height:"80%", width:"100%", display:"flex", flexDirection:"column", justifyContent:"space-between"}}>
                                             <TableRow sx={{border:"6x solid blue", width:"100%"}}>
-                                                <TableCell sx={{width:"100%", borderBottom:"none"}} align="left">(white)</TableCell>
-                                                <TableCell sx={{width:"100%", borderBottom:"none"}} align="right"><Button variant="outlined" size="3px"> 2</Button> </TableCell>
+                                                <TableCell sx={{width:"100%", borderBottom:"none"}} align="left">Size</TableCell>
+                                                <TableCell sx={{width:"100%", borderBottom:"none"}} align="right">{final.size}</TableCell>
+                                            </TableRow>
+                                            <TableRow sx={{border:"6x solid blue", width:"100%"}}>
+                                                <TableCell sx={{width:"100%", borderBottom:"none"}} align="left">Color</TableCell>
+                                                <TableCell sx={{width:"100%", borderBottom:"none"}} align="right">{final.color}</TableCell>
+                                            </TableRow>
+                                            <TableRow sx={{border:"6x solid blue", width:"100%"}}>
+                                                <TableCell sx={{width:"100%", borderBottom:"none"}} align="left">quantity</TableCell>
+                                                <TableCell sx={{width:"100%", borderBottom:"none"}} align="right"><Button variant="outlined" size="3px">{final.quantity} </Button> </TableCell>
                                             </TableRow>
                                             <TableRow mt={50} >
                                                 <TableCell  align="left"><Button variant="text" sx={{color:"red", width:"100%", borderBottom:"none"}} size="50px">REMOVE</Button></TableCell>
@@ -53,41 +61,7 @@ function SavedProducts() {
                                 </TableContainer>
                                                             
                             </Box>
-                        {/* <Box sx={{border:"1px solid blue", width:"100%", display:"flex", flexDirection:"row", justifyContent:"end"}}>    
-                            <Box sx={{border:"1px solid red", width:"100%", display:"flex", flexDirection:"column", justifyContent:"space-between"}}>
-                                <Box sx={{textAlign:"left"}}>
-                                    <Typography variant="h5" sx={{fontWeight:"3rem", border:"1px solid red"}}>{final.cetegory}</Typography>
-                                    <Box sx={{border:"1px solid red" }}>
-                                        <Grid container>
-                                            <Grid item xs={1} md={6}>
-                                                <Typography variant="p" sx={{fontWeight:"3rem"}}>{final.category}</Typography>
-
-                                            </Grid>
-                                            
-                                            <Grid item xs={1} md={6} sx={{ mt:{xs:5, sm:0, md:0} }}>
-                                                
-                                               
-                                            </Grid>
-                                            
-                                            <img src={final.image} alt="cloth" />
-                                        </Grid>    
-                                    </Box>
-
-                                </Box> 
-        
-
-                                <Box sx={{border:"1px solid red", width:"100%", display:"flex", alignItems:"end" }}>
-                                    <Box sx={{border:"1px solid red", display:"flex", width:"100%", justifyContent:"space-between"}}>
-                                        
-                                        <Button sx={{background: "red"}} variant="contained">REMOVE</Button>
-                                        <Button>{final.price}</Button>
-
-                                    </Box>
-                                </Box>
-                                
-                            </Box>
                         
-                        </Box> */}
                         </Card>
                         <Box pt={2} sx={{border:"1px solid green", width:"90%", height:"10vh", dislay:"flex", flexDirection:"column", justifyContent:"end", alignItems:"end"}}>
                             <Button variant={"contained"} onClick={handleNav}>Proceed To Checkout</Button>
@@ -109,4 +83,4 @@ function SavedProducts() {
 
     );
 }
-export default SavedProducts
+export default Cardcomponent

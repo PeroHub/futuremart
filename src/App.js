@@ -38,9 +38,8 @@ function App() {
         <Route path="/product" element={<Product />} />
         <Route path="/about" element={<AboutFuturemart />} />
         <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="*" element={<Error />}/>
-        <Route path="savedproducts" element={<SavedProducts />}/>
-        <Route path="footer" element={<Footer />}/>
+        <Route path="*" element={<Error />} />
+        <Route path="/savedproducts" element={<SavedProducts />}/>
       </Routes>
       </ThemeProvider>
     </div>

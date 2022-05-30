@@ -6,7 +6,7 @@ function LoginUI() {
     return (
         <Box className='login'>
             <Box id='general' sx={{
-                width: 
+                width: "100%",
             }}>
                 
                 <Box id='firstHalf'>

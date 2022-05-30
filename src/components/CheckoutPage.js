@@ -9,9 +9,11 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Footer from "./home/Footer";
 import Shipping from "./CheckoutComponent/Shipping";
-import Payment from "./CheckoutComponent/Payment";
-// import Review from "./CheckoutComponent/Review";
+// import Payment from "./CheckoutComponent/Payment";
+import Review from "./CheckoutComponent/Review";
 import PersonalDetails from "./CheckoutComponent/PersonalDetails";
+
+import FluterwaveButton from "./FlutterwaveButton";
 
 const steps = [
     {
@@ -23,12 +25,12 @@ const steps = [
       description: <PersonalDetails />,
     },
     {
-      label: 'Payment',
-      description: <Payment />,
+      label: 'Review',
+      description: <Review />,
     },
     {
-      label: 'Review',
-      description: <Footer />,
+      label: 'Payment',
+      description: <FluterwaveButton />,
     },
   ];
 
@@ -46,10 +48,16 @@ function CheckoutPage() {
     const handleReset = () => {
       setActiveStep(0);
     };
+
+
+    
+    
     return ( 
        <>
         <Box sx={{ display: {xs: "block", md: "grid"}, gridTemplateColumns: "1fr 1fr", width: {xs: "100%", md: "80%"}, margin: "0 auto"}}>
-            <Box sx={{order: 2}}>Chart section</Box>
+            <Box sx={{order: 2}}>
+              
+            </Box>
             <Box sx={{ maxWidth: {xs: "100%", md: "100%"}, border: "1px solid red" }}>
                     <Stepper activeStep={activeStep} orientation="vertical">
                         {steps.map((step, index) => (

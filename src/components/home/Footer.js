@@ -259,6 +259,7 @@ function Footer() {
                 <img
                   id="logo"
                   src={footerLogo}
+                  alt='futuremart__logo'
                   style={{
                     marginLeft: "10px",
                     width: "44px",
@@ -355,6 +356,7 @@ function Footer() {
           >
             <img
               id="logo"
+              alt='logo'
               src={footerLogo}
               style={{
                 marginLeft: "10px",

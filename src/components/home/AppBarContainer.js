@@ -82,7 +82,7 @@ function AppBarContainer() {
           <Typography
             noWrap
             component="a"
-            href="/"
+            href="/about"
             sx={{
               display: { xs: "none", md: "flex" },
               color: "black",

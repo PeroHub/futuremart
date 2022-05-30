@@ -13,7 +13,7 @@ import {
 
 function Footer() {
   return (
-    <Box  mt={10}>
+    <Box mt={10}>
       <div className="footer">
         <div className="holder">
           <div
@@ -28,11 +28,11 @@ function Footer() {
           >
             <div className="menuBox">
               <li
-                className="head"
+                className="head left "
                 style={{
                   fontWeight: 700,
                   fontSize: "16px",
-                  marginBottom: "10px",
+                  marginBottom: "20px",
                   fontStyle: "normal",
                   fontFamily: "Open Sans",
                   lineHeight: "24px",
@@ -40,7 +40,15 @@ function Footer() {
                   color: "#FFFFFF",
                 }}
               >
-                Menu
+                <Typography
+                  sx={{
+                    textAlign: { xs: "left", md: "center", lg: "left" },
+                    fontSize: { xs: "16px", md: "16px", lg: "16px" },
+                    marginTop: { xs: "40px", md: "24px", lg: "24px" },
+                  }}
+                >
+                  Menu
+                </Typography>
               </li>
               <li>Home</li>
               <li>Products</li>
@@ -49,11 +57,11 @@ function Footer() {
 
             <div className="productBox">
               <li
-                className="head"
+                className="head left"
                 style={{
                   fontWeight: 700,
                   fontSize: "16px",
-                  marginBottom: "10px",
+                  marginBottom: "20px",
                   fontStyle: "normal",
                   fontFamily: "Open Sans",
                   lineHeight: "24px",
@@ -61,7 +69,16 @@ function Footer() {
                   color: "#FFFFFF",
                 }}
               >
-                Products
+                <Typography
+                  sx={{
+                    textAlign: { xs: "left", md: "center", lg: "left" },
+                    fontSize: { xs: "16px", md: "16px", lg: "16px" },
+                    marginTop: { xs: "40px", md: "10px", lg: "10px" },
+                  }}
+                >
+                  {" "}
+                  Products
+                </Typography>
               </li>
 
               <li>Polos</li>
@@ -83,11 +100,11 @@ function Footer() {
           >
             <div className="helpBox">
               <li
-                className="head"
+                className="head left"
                 style={{
                   fontWeight: 700,
                   fontSize: "16px",
-                  marginBottom: "10px",
+                  marginBottom: "20px",
                   fontStyle: "normal",
                   fontFamily: "Open Sans",
                   lineHeight: "24px",
@@ -95,7 +112,15 @@ function Footer() {
                   color: "#FFFFFF",
                 }}
               >
-                Help
+                <Typography
+                  sx={{
+                    textAlign: { xs: "left", md: "left", lg: "left" },
+                    fontSize: { xs: "16px", md: "16px", lg: "16px" },
+                    marginTop: { xs: "40px", md: "24px", lg: "24px" },
+                  }}
+                >
+                  Help
+                </Typography>
               </li>
 
               <li>FAQs</li>
@@ -115,7 +140,7 @@ function Footer() {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center",
+                  justifyContent: "left",
                 }}
               >
                 <input
@@ -124,7 +149,14 @@ function Footer() {
                   className="footer__search"
                 />
                 <span>
-                  <button type="submit">Subscribe</button>
+                  <button
+                    type="submit"
+                    style={{
+                      justifyContent: "center",
+                    }}
+                  >
+                    Subscribe
+                  </button>
                 </span>
               </span>
 
@@ -140,22 +172,23 @@ function Footer() {
                 id="icons"
                 sx={{
                   display: "flex",
-                  justifyContent: "center",
+                  justifyContent: { xs: "left" },
                   alignItems: "center",
                   color: "#FFFFF",
                   fontSize: "50px",
                 }}
               >
                 <Typography
-                  size={20}
+                  size={50}
                   sx={{
                     margin: "20px 10px",
+                    marginLeft: "0px",
                   }}
                 >
                   <FaFacebook />
                 </Typography>
                 <Typography
-                  size={20}
+                  size={50}
                   sx={{
                     margin: "20px 10px",
                   }}
@@ -163,7 +196,7 @@ function Footer() {
                   <FaInstagram />
                 </Typography>
                 <Typography
-                  size={20}
+                  size={50}
                   sx={{
                     margin: "20px 10px",
                   }}
@@ -171,7 +204,7 @@ function Footer() {
                   <FaPhone />
                 </Typography>
                 <Typography
-                  size={20}
+                  size={50}
                   sx={{
                     margin: "20px 10px",
                   }}
@@ -179,7 +212,7 @@ function Footer() {
                   <FaTwitter />
                 </Typography>
                 <Typography
-                  size={20}
+                  size={50}
                   sx={{
                     margin: "20px 10px",
                   }}
@@ -195,29 +228,32 @@ function Footer() {
                   <FiMail />
                 </Typography>
               </Box>
-
-              <div
-                id="line"
-                style={{
-                  width: "80%",
-                  height: "20px",
-                  background: "#FFFFF",
-                  backgroundColor: "#FFFFF",
-                  border: "1px solid #FFFFF",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
+              <Box
+                id="mobileLine"
+                sx={{
+                  display: { md: "none", lg: "none" },
+                  width: { xs: "100%", md: "0px", lg: "0px" },
+                  marginRight: { xs: "auto" },
+                  marginLeft: { xs: "auto" },
+                  marginTop: { md: "20px" },
                 }}
               >
                 <hr />
-              </div>
+              </Box>
             </div>
-            <div id="final">
+            <div
+              id="final"
+              style={{
+                display: { sm: "none", md: "none", lg: "none" },
+                paddingBottom: { xs: "20px" },
+              }}
+            >
               <div
                 id="finalFlex1"
                 style={{
                   alignItems: "center",
                   justifyContent: "center",
+                  paddingBottom: { xs: "25px" },
                 }}
               >
                 <img
@@ -230,7 +266,6 @@ function Footer() {
                   }}
                 ></img>
               </div>
-
               <div id="finalFlex2">
                 <Typography
                   id="copyright"
@@ -239,6 +274,7 @@ function Footer() {
                     fontStyle: "normal",
                     fontWeight: 500,
                     fontSize: "15px",
+                    paddingBottom: { xs: "25px" },
                     color: "white",
                   }}
                 >
@@ -247,7 +283,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div id="final2" style={{ display: "none" }}>
+          {/* <div id="final2" style={{ display: "none" }}>
             <div
               id="finalFlex1"
               style={{
@@ -280,9 +316,70 @@ function Footer() {
                 © Copyright 2007-2022 FutureMart. All rights reserved
               </Typography>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
+
+      <Box
+        id="mdScreenDisplay large"
+        sx={{
+          display: { xs: "none", sm: "none", md: "block", lg: "block" },
+          width: { lg: "100%", md: "100%" },
+          backgroundColor: { md: "#1e3272", lg: "#1e3272" },
+        }}
+      >
+        <Box
+          sx={{
+            display: { md: "block", lg: "block" },
+            width: "85%",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          {/* <hr /> */}
+        </Box>
+        <div
+          id="final2"
+          style={{
+            display: { xs: "none", sm: "block", md: "block", lg: "block" },
+            width: { lg: "100%", md: "100%" },
+            height: { lg: "fit-content", md: "fit-content" },
+          }}
+        >
+          <div
+            id="finalFlex3"
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <img
+              id="logo"
+              src={footerLogo}
+              style={{
+                marginLeft: "10px",
+                width: "44px",
+                height: "44px",
+              }}
+            ></img>
+          </div>
+
+          <div id="finalFlex4">
+            <Typography
+              id="copyright"
+              sx={{
+                fontFamily: "Raleway",
+                fontStyle: "normal",
+                fontWeight: 500,
+                fontSize: "20px",
+                color: "white",
+              }}
+            >
+              © Copyright 2007-2022 FutureMart. All rights reserved
+            </Typography>
+          </div>
+        </div>
+      </Box>
     </Box>
   );
 }

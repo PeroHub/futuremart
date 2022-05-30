@@ -4,9 +4,11 @@ import { Routes, Route } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 // import { futureTheme } from "./theme"
 import Home from './components/home/Home';
+import Footer from './components/home/Footer';
 import Product from './components/products/Product';
 import Error from "./components/ErrPage"
 import CheckoutPage from './components/CheckoutPage';
+import AboutFuturemart from './components/AboutFuturemart';
 import SavedProducts from './components/home/card';
 
 
@@ -34,9 +36,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/about" element={<AboutFuturemart />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="*" element={<Error />}/>
         <Route path="savedproducts" element={<SavedProducts />}/>
+        <Route path="footer" element={<Footer />}/>
       </Routes>
       </ThemeProvider>
     </div>

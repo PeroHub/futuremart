@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 // import { futureTheme } from "./theme"
 import Home from './components/home/Home';
-import Footer from './components/home/Footer';
 import Product from './components/products/Product';
 import Error from "./components/ErrPage"
 import CheckoutPage from './components/CheckoutPage';

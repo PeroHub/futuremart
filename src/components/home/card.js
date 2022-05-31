@@ -1,6 +1,6 @@
 import {Container, Grid, Card, Box, Typography, Button, Avatar} from '@mui/material';
 // import { FormControl, InputLabel, Select, MenuItem} from '@mui/material'; 
-import ButtonMain from '../ButtonMain';
+// import ButtonMain from '../ButtonMain';
 import { useNavigate } from 'react-router-dom';
 import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 
@@ -29,7 +29,7 @@ function Cardcomponent() {
                     <Grid item xs={12} sm={12} md={12} sx={{border:"1px solid yellow", background:"#FAFCFD", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", textAlign:"center", p:10 }}>
                         <Card sx={{display:{xs:"block", md:"flex"}, height:{ xs:"70", md:"40vh"}, width:{xs:"80vw", sm:"80%", md:"90%"},border:"1px solid blue"}}>
                             <Box sx={{ border:"1px solid red", height:{xs:"30vh", md:"inherit"}, width:{xs:"100%", md:"30vw"}, display:"flex", justifyContent:"center", alignItems:"center"}}>
-                                <Avatar sx={{height:"190px", width:"190px"}}><img src={final.image}/></Avatar>
+                                <Avatar sx={{height:"190px", width:"190px"}}><img src={final.image} alt="chart"/></Avatar>
                             </Box>
                             <Box sx={{ border:"1px solid red", height:"inherit", width:{xs:"100%", md:"60%"}}}>
                                 <TableContainer   sx={{overflow:"hidden",height:"100%", border:"6x solid yellow"}} >

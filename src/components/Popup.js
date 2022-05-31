@@ -161,7 +161,7 @@ function Popup(props) {
                         </Grid>
                     </Grid>
                     
-                        <Box  sx={{border:"1px solid red", display:"flex", justifyContent:"center", mt:3}}>
+                        <Box  sx={{display:"flex", justifyContent:"center"}}>
                             <Stack direction="row" spacing={3}>
                                 {/* <ButtonMain variant={"contained"} size={"medium"} width={"10rem"} height={"45px"} text={"Add to Cart"}/>
                             <ButtonMain variant={"outlined"} size={"medium"} text={"Cancel"} width={"10rem"} onClick={handleClose} height={"45px"}/> */}

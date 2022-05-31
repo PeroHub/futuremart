@@ -55,7 +55,7 @@ function Popup(props) {
         
        
        setTimeout(() => {
-        navigate("/savedproducts")
+        navigate("/card")
        }, 2000)
     }
     

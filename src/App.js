@@ -7,8 +7,12 @@ import Home from './components/home/Home';
 import Product from './components/products/Product';
 import Error from "./components/ErrPage"
 import CheckoutPage from './components/CheckoutPage';
+
+import Cardcomponent from './components/home/card';
+
 import AboutFuturemart from './components/AboutFuturemart';
 import SavedProducts from './components/home/card';
+
 
 
 
@@ -38,7 +42,14 @@ function App() {
         <Route path="/about" element={<AboutFuturemart />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="*" element={<Error />} />
+
+        <Route path="/card" element={<Cardcomponent/>}/>
+
+        {/* <Route path="savedproducts" element={<SavedProducts />}/> */}
+
+
         <Route path="/savedproducts" element={<SavedProducts />}/>
+
       </Routes>
       </ThemeProvider>
     </div>

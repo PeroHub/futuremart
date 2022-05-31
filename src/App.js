@@ -1,46 +1,54 @@
-import './App.css';
+import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 // import { futureTheme } from "./theme"
 import Home from './components/home/Home';
 import Product from './components/products/Product';
-import Error from "./components/Error"
+import Error from "./components/ErrPage"
 import CheckoutPage from './components/CheckoutPage';
+
 import Cardcomponent from './components/home/card';
+
+import AboutFuturemart from './components/AboutFuturemart';
+import SavedProducts from './components/home/card';
+
 
 
 
 const theme = createTheme({
-    palette: {
-        primary: {
-          main: '#0D0AB8'
-        },
-        secondary: {
-          main: '#414744'
-        }
+  palette: {
+    primary: {
+      main: "#0D0AB8",
     },
-    typography: {
-      fontFamily: "Inter"
+    secondary: {
+      main: "#414744",
     },
-    shape: {
-      borderRadius: 0
-    }
-})
-
+  },
+  typography: {
+    fontFamily: "Inter",
+  },
+  shape: {
+    borderRadius: 0,
+  },
+});
 function App() {
-
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/about" element={<AboutFuturemart />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="*" element={<Error />} />
+
         <Route path="/card" element={<Cardcomponent/>}/>
 
         {/* <Route path="savedproducts" element={<SavedProducts />}/> */}
+
+
+        <Route path="/savedproducts" element={<SavedProducts />}/>
 
       </Routes>
       </ThemeProvider>

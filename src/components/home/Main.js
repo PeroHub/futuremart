@@ -215,7 +215,7 @@ function Main() {
 
                     <Typography>We offer a secured environment with 24 hour customer service  to make your shopping experience easier while ensuring rapid response to your shopping needs.</Typography>
 
-                    <Typography>We offer a secured environment with 24 hours customer service  to make your shopping experience easier while ensuring rapid response to your shopping needs.</Typography>
+                    
 
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center"}} >

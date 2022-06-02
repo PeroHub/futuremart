@@ -30,13 +30,19 @@ function AppBarContainer() {
     navigate("/")
   }
 
-//   const  handleLoginCheck = () =>  {
-//     if(!isAuthenticated){
-//         loginWithRedirect()
-//     }else {
-//         alert("all good")
-//     }
-// }
+
+
+  let cart = [JSON.parse(localStorage.getItem('userWant'))]
+  console.log(cart["0"])
+
+  let numz
+  if(cart["0"] === null){
+     console.log("null")
+     numz = 0
+  }else {
+    console.log("Not null")
+    numz = cart.length
+  }
   
     return ( 
         <AppBar position="static" sx={{background: "#FBFBFB", boxShadow: "none"}}>
@@ -94,8 +100,10 @@ function AppBarContainer() {
               </Box>
               <Box sx={{display: "flex", justifyContent: "space-between",  alignItems: "center", position: "relative", left: "45px", width: {xs: "50%", sm: "50%", md: "20%"}}}>
                 {/* <img src={love} style={{width: "20px", height: "20px"}} alt="love"/> */}
-                <img src={chart} style={{width: "20px", height: "20px"}} alt="chart" />
-                <img src={profile} style={{width: "20px", height: "20px"}} alt="profile" />
+                <img src={chart} style={{width: "30px", height: "30px"}} alt="chart" />
+                <span style={{border: "1px solid red", borderRadius: "50%", height: "15px", width: "15px", backgroundColor: "red", color: "#fff", padding: "5px", fontSize: "14px", display: "flex", justifyContent: "center", alignItems: "center", position: "relative", right: "25px", top: "-8px"}}>{numz}</span>
+                <img src={profile} style={{width: "30px", height: "30px"}} alt="profile" />
+
               </Box>
             </Box>
           </Box>

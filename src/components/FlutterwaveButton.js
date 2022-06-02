@@ -19,7 +19,7 @@ const item = JSON.parse(result)
     payment_options: 'card,mobilemoney,ussd',
     redirect_url: '/',
     customer: {
-      email: value.email,
+      email: value?.email,
       phonenumber: '07064586146',
       name: 'joel ugwumadu',
     },

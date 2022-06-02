@@ -15,6 +15,11 @@ function Cardcomponent() {
         navigate("/checkout")
     }
 
+    const remove = () => {
+        localStorage.removeItem('userWant')
+        navigate("/product")
+    }
+
     // <Button sx={{background: "red"}} variant="contained">REMOVE</Button>
     // <Button>{final.price}</Button>
 
@@ -53,7 +58,7 @@ function Cardcomponent() {
                                                 <TableCell sx={{width:"100%", borderBottom:"none"}} align="right"><Button variant="outlined" size="3px">{final.quantity} </Button> </TableCell>
                                             </TableRow>
                                             <TableRow mt={50} >
-                                                <TableCell  align="left"><Button variant="text" sx={{color:"red", width:"100%", borderBottom:"none"}} size="50px">REMOVE</Button></TableCell>
+                                                <TableCell  align="left"><Button variant="text" onClick={remove} sx={{color:"red", width:"100%", borderBottom:"none"}} size="50px">REMOVE</Button></TableCell>
                                                 <TableCell sx={{width:"100%", borderBottom:"none"}}  align="right"><Button variant="text"  size="50px">{final.price}</Button> </TableCell>
                                             </TableRow>
                                         </TableBody>

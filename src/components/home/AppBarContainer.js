@@ -58,8 +58,10 @@ function AppBarContainer() {
                   href="/"
                   sx={{
                     display: { xs: 'none', md: 'flex' },
-                    color: 'black',
+                    color: '#3A3A3A',
                     textDecoration: 'none',
+                    fontSize:"16px",
+                    fontWeight:"700",
                   }}
                 >
                   Products
@@ -69,11 +71,12 @@ function AppBarContainer() {
             <Button
               noWrap
               component="a"
-              href="/"
+              href="/about"
               sx={{
                 display: { xs: 'none', md: 'flex' },
-                color: 'black',
-                textDecoration: 'none',
+                color: '#3A3A3A99',
+                fontSize:"16px",
+                fontWeight:"200",
               }}
             >
               About FutureMart

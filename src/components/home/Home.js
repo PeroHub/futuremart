@@ -11,7 +11,7 @@ function Home() {
         <div style={{overflowX: "hidden"}}>
             <Header />
             <Main />
-            <Footer />
+            <Footer mt={10}/>
             
         </div>
      );

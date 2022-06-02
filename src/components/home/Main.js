@@ -40,7 +40,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-
+ 
 // import Popup from '../../components/Popup';
 
 
@@ -71,9 +71,7 @@ function Main() {
         return product.id > 3 ;
        })
 
-
-       
-       
+   
       
       
 
@@ -98,7 +96,7 @@ function Main() {
     // const {  isAuthenticated, loginWithRedirect, isLoading } = useAuth0()
 
    
-
+       
         return ( 
         <>
             {/* First Grid Our products */}
@@ -146,15 +144,23 @@ function Main() {
                         
                         <Button 
                             variant="outlined" 
-                            size="small"  
+                            size="small"
+                            disableFocusRipple  
                             sx={{width:"46%",
+                            border:"0.5px solid #B0B0B0",
+                            color:"#B0B0B0",
+                            ':hover': {
+                                bgcolor: "#B0B0B0", // theme.palette.primary.main
+                                color: '#ffff',
+                                border:"0.5px solid #B0B0B0",
+                            },
                             margin: "0 auto",
                             borderRadius:"3px",
                             textTransform:"none", 
                             fontSize:"75%",
                             mt:{md:3.5} }} 
                             onClick={handleNavi}
-                            startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart 
+                            startIcon={<ShoppingCartIcon />}> Add to Cart 
                         </Button>
                         </CardActions>
                         </Card>
@@ -166,7 +172,7 @@ function Main() {
 
             <Link to="/product">
                 <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
-                    <ButtonMain variant={"outlined"} width={"200px"} height={"50px"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} fontSize={"18px"}   /> 
+                    <ButtonMain variant={"outlined"} width={"200px"} height={"50px"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} fontSize={"18px"}/> 
                 </Box>
             </Link>
            
@@ -199,7 +205,7 @@ function Main() {
                         </Avatar> 
                     </Box>
                     <br></br>
-                    <Typography>Signup here to kickstart your wonderful shopping experience with us. </Typography>
+                    <Typography sx={{fontFamily:"Quando"}}>Signup here to kickstart your wonderful shopping experience with us. </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center"}} >
                     <Typography sx={{fontWeight:"bold", color:"#333333"}}>Shop</Typography>
@@ -212,11 +218,7 @@ function Main() {
                         </Avatar>
                     </Box>
                     <br></br>
-
-                    <Typography>We offer a secured environment with 24 hour customer service  to make your shopping experience easier while ensuring rapid response to your shopping needs.</Typography>
-
-                    <Typography>We offer a secured environment with 24 hours customer service  to make your shopping experience easier while ensuring rapid response to your shopping needs.</Typography>
-
+                    <Typography sx={{fontFamily:"Quando"}}>We offer a secured environment with 24 hour customer service  to make your shopping experience easier while ensuring rapid response to your shopping needs.</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center"}} >
                     <Typography sx={{fontWeight:"bold", color:"#333333"}}>Check Out</Typography>
@@ -229,7 +231,7 @@ function Main() {
                         </Avatar>
                     </Box>
                     <br></br>
-                    <Typography>We offer the best discounts with a wide varienty of goods to choose from. </Typography>
+                    <Typography sx={{fontFamily:"Quando"}}>We offer the best discounts with a wide varienty of goods to choose from. </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"flex", flexDirection:"column", textAlign:"center"}} >
                     <Typography sx={{fontWeight:"bold", color:"#333333"}}>Wait for Delivery </Typography>
@@ -243,10 +245,7 @@ function Main() {
                     </Box>
                     <br></br>
 
-                    <Typography>We quarantee delivery within 48 hour from time of placing order. </Typography>
-
-                    <Typography>We quarantee delivery within 48 hours after time of placing order. </Typography>
-
+                    <Typography sx={{fontFamily:"Quando"}}>We quarantee delivery within 48 hour from time of placing order. </Typography>
                 </Grid>
                 
             </Grid>
@@ -316,13 +315,20 @@ function Main() {
                             variant="outlined" 
                             size="small"  
                             sx={{width:"46%",
+                            border:"0.5px solid #B0B0B0",
+                            color:"#B0B0B0",
+                            ':hover': {
+                                bgcolor: "#B0B0B0", // theme.palette.primary.main
+                                color: '#ffff',
+                                border:"0.5px solid #B0B0B0",
+                            },
                             margin: "0 auto",
                             borderRadius:"3px",
                             textTransform:"none", 
                             fontSize:"75%",
                             mt:{md:3.5} }} 
                             onClick={handleNavi}
-                            startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart 
+                            startIcon={<ShoppingCartIcon/>}> Add to Cart 
                         </Button>
                             
                             
@@ -441,7 +447,7 @@ function Main() {
                     <Typography>Mercy Okon</Typography>
                     <Typography sx={{color:"#ED8204"}}>Web Developer</Typography>
                     <br></br>
-                    <Typography>I have been using FutureMart for like a year now and there has never been a time I experienced a case of: " what I ordered vs what  I got". Quality is always assured.</Typography>
+                    <Typography sx={{fontFamily:"Quando"}}>I have been using FutureMart for like a year now and there has never been a time I experienced a case of: " what I ordered vs what  I got". Quality is always assured.</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"block", justifyContent:"center", textAlign:"center"}}>
                     <Box sx={{display:"flex", justifyContent:"center"}}>
@@ -454,7 +460,7 @@ function Main() {
                     <Typography>Bertila Sam</Typography>
                     <Typography sx={{color:"#ED8204"}}>Web Developer</Typography>
                     <br></br>
-                    <Typography>My goods got delivered within 24 hour and that was really amazing!; because, I have been using e-commerce sites for years now and never have I experienced such.</Typography>
+                    <Typography sx={{fontFamily:"Quando"}}>My goods got delivered within 24 hour and that was really amazing!; because, I have been using e-commerce sites for years now and never have I experienced such.</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} sx={{display:"block", justifyContent:"center", textAlign:"center"}}>
                     <Box sx={{display:"flex", justifyContent:"center"}}>
@@ -467,7 +473,7 @@ function Main() {
                     <Typography>Uduak Peter</Typography>
                     <Typography sx={{color:"#ED8204"}}>Web Developer</Typography>
                     <br></br>
-                    <Typography> I remember over paying for a product, but thanks to the swift customer service intervention. I got my money refunded.</Typography>
+                    <Typography sx={{fontFamily:"Quando"}}> I remember over paying for a product, but thanks to the swift customer service intervention. I got my money refunded.</Typography>
                 </Grid>
                 
                 <Grid item xs={12} sm={6} md={3} sx={{display:"block", justifyContent:"center", textAlign:"center"}}>
@@ -481,7 +487,7 @@ function Main() {
                     <Typography>Clement Essien</Typography>
                     <Typography sx={{color:"#ED8204"}}>Web Developer</Typography>
                     <br></br>
-                    <Typography> I have always been skeptical about e-commerce sites and their services but future mart came and change my perception.</Typography>
+                    <Typography sx={{fontFamily:"Quando"}}> I have always been skeptical about e-commerce sites and their services but future mart came and change my perception.</Typography>
                 </Grid>
             </Grid>
 

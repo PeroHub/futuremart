@@ -36,7 +36,7 @@ function Cardcomponent() {
                                     <Table sx={{border:"6x solid red", height:"100%", display:"flex", flexDirection:"column" }}>
                                         <TableHead sx={{border:"6x solid blue", width:"100%"}}>
                                             <TableRow sx={{border:"6x solid blue", width:"100%"}}>
-                                                <TableCell sx={{borderBottom:"none"}}><Typography variant="h5" sx={{fontWeight:"3rem", border:"1px solid red"}}>{final.cetegory}</Typography></TableCell>
+                                                <TableCell sx={{borderBottom:"none"}}><Typography variant="h5" sx={{fontWeight:"3rem"}}>{final.cetegory}</Typography></TableCell>
                                             </TableRow> 
                                         </TableHead>
                                         <TableBody sx={{ height:"80%", width:"100%", display:"flex", flexDirection:"column", justifyContent:"space-between"}}>

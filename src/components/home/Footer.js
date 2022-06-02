@@ -11,9 +11,9 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
-function Footer({mt}) {
+function Footer() {
   return (
-    <Box mt={mt}>
+    <Box mt={10}>
       <div className="footer">
         <div className="holder">
           <div

@@ -63,7 +63,7 @@ function Header({bangle}) {
     // }
     return ( 
        
-        <Box search={search} sx={{background: "#FBFBFB"}}>
+        <Box sx={{background: "#FBFBFB"}}>
             <AppBarContainer />
             <Box sx={{ minHeight: "50vh", display: "flex",  justifyContent: "center", alignItems: "center"}}>
                 <Box sx={{width: {xs: "100%", md: "80%"}, display: {sm : "block", md: "grid"}, height: "inherit", gridTemplateColumns: "1fr 1fr", margin: "0 auto" }}>

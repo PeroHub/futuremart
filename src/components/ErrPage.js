@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Footer from "./home/Footer.js";
-import Header from "./home/Header.js";
+// import Header from "./home/Header.js";
 import cryingEmoji from "../images/cryingEmoji.png";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";

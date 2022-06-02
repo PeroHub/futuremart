@@ -40,7 +40,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-
+ 
 // import Popup from '../../components/Popup';
 
 
@@ -71,9 +71,7 @@ function Main() {
         return product.id > 3 ;
        })
 
-
-       
-       
+   
       
       
 
@@ -98,7 +96,7 @@ function Main() {
     // const {  isAuthenticated, loginWithRedirect, isLoading } = useAuth0()
 
    
-
+       
         return ( 
         <>
             {/* First Grid Our products */}
@@ -146,17 +144,23 @@ function Main() {
                         
                         <Button 
                             variant="outlined" 
-                            size="small"  
+                            size="small"
+                            disableFocusRipple  
                             sx={{width:"46%",
                             border:"0.5px solid #B0B0B0",
                             color:"#B0B0B0",
+                            ':hover': {
+                                bgcolor: "#B0B0B0", // theme.palette.primary.main
+                                color: '#ffff',
+                                border:"0.5px solid #B0B0B0",
+                            },
                             margin: "0 auto",
                             borderRadius:"3px",
                             textTransform:"none", 
                             fontSize:"75%",
                             mt:{md:3.5} }} 
                             onClick={handleNavi}
-                            startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart 
+                            startIcon={<ShoppingCartIcon />}> Add to Cart 
                         </Button>
                         </CardActions>
                         </Card>
@@ -168,7 +172,7 @@ function Main() {
 
             <Link to="/product">
                 <Box width="fullWidth" mt={6} sx={{height:"65px", display:"flex", flexDirection:"row", justifyContent:"center", textAlign:"center"}}>
-                    <ButtonMain variant={"outlined"} width={"200px"} height={"50px"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} fontSize={"18px"}   /> 
+                    <ButtonMain variant={"outlined"} width={"200px"} height={"50px"} bg={"red"} text={"View More"} border={"1px solid #414744"} color={"#414744"} fontSize={"18px"}/> 
                 </Box>
             </Link>
            
@@ -313,13 +317,18 @@ function Main() {
                             sx={{width:"46%",
                             border:"0.5px solid #B0B0B0",
                             color:"#B0B0B0",
+                            ':hover': {
+                                bgcolor: "#B0B0B0", // theme.palette.primary.main
+                                color: '#ffff',
+                                border:"0.5px solid #B0B0B0",
+                            },
                             margin: "0 auto",
                             borderRadius:"3px",
                             textTransform:"none", 
                             fontSize:"75%",
                             mt:{md:3.5} }} 
                             onClick={handleNavi}
-                            startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>}> Add to Cart 
+                            startIcon={<ShoppingCartIcon/>}> Add to Cart 
                         </Button>
                             
                             

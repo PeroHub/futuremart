@@ -16,6 +16,8 @@ import { futureProducts } from "../../products"
 import Footer from '../home/Footer';
 import Popup from '../Popup';
 function Product() {
+    
+    
     let item = futureProducts()
     const bangle = item[4]
     console.log(bangle.image)
@@ -69,12 +71,17 @@ function Product() {
                             sx={{width:"46%",
                             border:"0.5px solid #B0B0B0",
                             color:"#B0B0B0",
+                            ':hover': {
+                                bgcolor: "#B0B0B0", // theme.palette.primary.main
+                                color: '#ffff',
+                                border:"0.5px solid #B0B0B0",
+                            },
                             margin: "0 auto",
                             borderRadius:"3px",
                             textTransform:"none", 
                             fontSize:"75%",
                             mt:{md:3.5} }} 
-                            startIcon={<ShoppingCartIcon sx={{color:"#B0B0B0"}}/>} 
+                            startIcon={<ShoppingCartIcon/>} 
                             onClick={() => {
                                 handleOpen()
                                 setDiaogData(product)

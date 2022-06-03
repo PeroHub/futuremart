@@ -61,7 +61,7 @@ function AppBarContainer() {
                   <Button
                   noWrap
                   component="a"
-                  href="/"
+                  
                   sx={{
                     display: { xs: 'none', md: 'flex' },
                     color: 'black',
@@ -72,18 +72,20 @@ function AppBarContainer() {
                 </Button>
               </Link>
               
-            <Button
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                display: { xs: 'none', md: 'flex' },
-                color: 'black',
-                textDecoration: 'none',
-              }}
-            >
-              About FutureMart
-            </Button>
+              <Link to="/about">
+                  <Button
+                  noWrap
+                  component="a"
+                  
+                  sx={{
+                    display: { xs: 'none', md: 'flex' },
+                    color: 'black',
+                    textDecoration: 'none',
+                  }}
+                >
+                  About FutureMart
+                </Button>
+              </Link>
           </Box>
 
           

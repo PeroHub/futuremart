@@ -35,19 +35,19 @@ function Toggle() {
                 </Button>
               </Link>
               
-            <Button
-              noWrap
-              component="a"
-              
-              sx={{
-                mt: 2,
-                display: { xs: 'block'},
-                color: 'black',
-                textDecoration: 'none',
-              }}
-            >
-              About FutureMart
-            </Button>
+              <Link to="/about">
+                  <Button
+                  noWrap
+                  component="a"
+                  
+                  sx={{
+                    color: 'black',
+                    textDecoration: 'none',
+                  }}
+                >
+                  About FutureMart
+                </Button>
+              </Link>
           </Box>
             </div>
         </div>

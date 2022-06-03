@@ -9,37 +9,37 @@
         id: 1,
         cetegory: "FutureLabs Polo",
         image : Tshirt,
-        price: "₦2000.00"
+        price: "2000"
     },
     {
         id: 2,
         cetegory: "Bangles",
         image : Bangles,
-        price: "₦250.00"
+        price: "250"
     },
     {
         id: 3,
         cetegory: "Stickers",
         image : Sticker,
-        price: "₦200.00"
+        price: "200.00"
     },
     {
         id: 4,
         cetegory: "Jotter",
         image : Jotter,
-        price: "₦1000.00"
+        price: "1000"
     },
     {
         id: 5,
         cetegory: "Hoodie",
         image : Hoodie,
-        price: "₦2500.00"
+        price: "2500"
     },
     {
         id: 6,
         cetegory: "Biro",
         image : Biro,
-        price: "₦2500.00"
+        price: "150"
     },
 ]
 

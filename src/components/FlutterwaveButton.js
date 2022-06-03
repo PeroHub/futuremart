@@ -11,20 +11,24 @@ const value = JSON.parse(user)
 let result = localStorage.getItem('userWant')
 const item = JSON.parse(result)
 
+let amount =  item?.price
+
+console.log(amount)
+
   const config = {
     public_key: 'FLWPUBK_TEST-b434ac7a4afa5a1dfb4febac87fc301e-X',
     tx_ref: Date.now(),
-    amount: 200,
+    amount: amount,
     currency: 'NGN',
     payment_options: 'card,mobilemoney,ussd',
     redirect_url: '/',
     customer: {
       email: value?.email,
       phonenumber: '07064586146',
-      name: 'joel ugwumadu',
+      name: value?.name,
     },
     customizations: {
-      title: 'my Payment Title',
+      title: 'FutureMart',
       description: 'Payment for items in cart',
       logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
     },
@@ -35,7 +39,7 @@ const item = JSON.parse(result)
   return (
     <div className="App">
      <Box sx={{background:'#ED8204', textAlign: "center", p:2, color: "#fff"}}>
-            <Typography>Total Price {item.price}</Typography>
+            <Typography>Total Price N{item.price}</Typography>
             <Typography sx={{fontSize: "2rem"}}>Payment</Typography>
         </Box>
 

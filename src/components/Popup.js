@@ -82,7 +82,7 @@ function Popup(props) {
                             <Stack spacing={4}>
                                 <Typography variant="h5" sx={{fontWeight:"3rem"}}>FutureLabs Polo</Typography>
                                 <ImageFrame  width={"170px"} height={"170px"} image={dialogData?.image} />
-                                <Button  variant="contained" size="large" sx={{backgroundColor:"#ED8204", borderRadius:"none", height:"120px"}} >{dialogData?.price}</Button>
+                                <Button  variant="contained" size="large" sx={{backgroundColor:"#ED8204", borderRadius:"none", height:"120px"}} >N{dialogData?.price}</Button>
 
                             </Stack>
                         

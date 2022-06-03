@@ -68,9 +68,9 @@ function CheckoutPage() {
     
     return ( 
        <>
-        <Box sx={{ display: {xs: "block", md: "grid"}, gridTemplateColumns: "1fr 1fr", width: {xs: "100%", md: "100%"}, margin: "0 auto"}}>
+        <Box sx={{ display: {xs: "block", md: "grid"}, overflowX: "hidden", gridTemplateColumns: "1fr 1fr", width: {xs: "100%", md: "100%"}, margin: "0 auto"}}>
             
-            <Typography sx={{textAlign: "center", p: 2, color: "red"}}>Please take a screent short of this Product and send to us via whatsapp(07034825560) along with your proof of payment</Typography>
+            <Typography sx={{textAlign: "center", p: 2, color: "red"}}>Please take a screent short of this Product and send to us via whatsapp along with your proof of payment</Typography>
             <ReactWhatsapp number="2347034825560" message="Hello!!" style={{backgroundColor: "blue", color: "#fff", padding: "5px"}}>Send Us a message</ReactWhatsapp>
             <Box  sx={{order: 2, p:3, pt:{md:21}, display:"flex", flexDirection:"column", height:"100%", backgroundColor:"#FAFCFD"}}>
             <Card sx={{display:{xs:"block", md:"flex"}, height:{ xs:"70", md:"40vh"}, width:{xs:"100vw", sm:"100%", md:"100%"}}}>

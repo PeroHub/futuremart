@@ -69,7 +69,7 @@ function Cardcomponent() {
                         
                         </Card>
                         <Box pt={2} sx={{ width:"90%", height:"10vh", dislay:"flex", flexDirection:"column", justifyContent:"end", alignItems:"end"}}>
-                            <Button variant={"contained"} onClick={handleNav}>Proceed To Checkout</Button>
+                            <Button fullWidth variant={"contained"} onClick={handleNav}>Proceed To Checkout</Button>
                         </Box>
 
 

@@ -76,7 +76,7 @@ function CheckoutPage() {
             <Card sx={{display:{xs:"block", md:"flex"}, height:{ xs:"70", md:"40vh"}, width:{xs:"100vw", sm:"100%", md:"100%"}}}>
                             <Box sx={{ pt:{xs:7, md:0},height:{xs:"30vh", md:"inherit"}, width:{xs:"100%", md:"30vw"}, display:"flex", flexDirection:"column", justifyContent:"space-around", alignItems:"center", textAlign:"center"}}>
                                 <Avatar sx={{height:"190px", width:"190px"}}><img src={final.image} alt="checkout"/></Avatar>
-                                <Button  variant="contained" size="large" sx={{backgroundColor:"#ED8204", borderRadius:"none", mt:{xs:1.5, md:0} }} >{final.price}</Button>
+                                <Button  variant="contained" size="large" sx={{backgroundColor:"#ED8204", borderRadius:"none", mt:{xs:1.5, md:0} }} >N{final.price}</Button>
                             </Box>
                             <Box sx={{height:"inherit", width:{xs:"100%", md:"60%"}}}>
                                 <TableContainer   sx={{overflow:"hidden",height:"100%", p:{xs:8, md:0}}} >

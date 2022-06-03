@@ -184,7 +184,7 @@ function Shipping() {
                             onChange={handleUserChange}
                             placeholder="Order Comment"
                             fullWidth
-                            type="comment"
+                            type="text"
                             required
                         />
                     </Box>

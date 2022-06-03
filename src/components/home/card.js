@@ -59,7 +59,7 @@ function Cardcomponent() {
                                             </TableRow>
                                             <TableRow mt={50} >
                                                 <TableCell  align="left"><Button variant="text" onClick={remove} sx={{color:"red", width:"100%", borderBottom:"none"}} size="50px">REMOVE</Button></TableCell>
-                                                <TableCell sx={{width:"100%", borderBottom:"none"}}  align="right"><Button variant="text"  size="50px">{final.price}</Button> </TableCell>
+                                                <TableCell sx={{width:"100%", borderBottom:"none"}}  align="right"><Button variant="text"  size="50px">N{final.price}</Button> </TableCell>
                                             </TableRow>
                                         </TableBody>
                                     </Table>

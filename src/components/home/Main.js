@@ -120,7 +120,7 @@ function Main() {
                     <Grid item xs={12} sm={12} md={4} key={product.id}>
                 
                         <Card xs={12} sx={{height:"45vh", textAlign:"end", backgroundColor:"#FAFAFA"}}>
-                            <Button  variant="contained" size="small" sx={{backgroundColor:"#ED8204", borderRadius:"none"}} >{product.price}</Button>
+                            <Button  variant="contained" size="small" sx={{backgroundColor:"#ED8204", borderRadius:"none"}} >N{product.price}</Button>
                             <CardMedia  sx={{  display:"flex", alignItems:"center", justifyContent:"space-around"}}>
                                 <Box sx={{ display:"flex", width:"100%", height:"40vh", alignItems:"center", justifyContent:"space-around"}}>
                                     <ImageFrame  width={"200px"} height={"200px"}  image={product.image}/>
@@ -287,7 +287,7 @@ function Main() {
                     <Grid item xs={12} sm={12} md={4} key={product.id}>
                 
                         <Card xs={12} sx={{height:"45vh", textAlign:"end", backgroundColor:"#FAFAFA"}}>
-                            <Button  variant="contained" size="small" sx={{backgroundColor:"#ED8204", borderRadius:"none"}} >{product.price}</Button>
+                            <Button  variant="contained" size="small" sx={{backgroundColor:"#ED8204", borderRadius:"none"}} >N{product.price}</Button>
                             <CardMedia  sx={{  display:"flex", alignItems:"center", justifyContent:"space-around"}}>
                                 <Box sx={{ display:"flex", width:"100%", height:"40vh", alignItems:"center", justifyContent:"space-around"}}>
                                     <ImageFrame width={"200px"} height={"200px"}  image={product.image}/>

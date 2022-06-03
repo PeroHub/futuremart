@@ -13,8 +13,8 @@ import {
 
 function Footer() {
   return (
-    <Box mt={10}>
-      <div className="footer">
+    <Box mt={10} >
+      <div className="footer" style={{padding: "10px"}}>
         <div className="holder">
           <div
             className="flex1"

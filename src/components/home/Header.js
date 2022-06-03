@@ -14,6 +14,7 @@ import AppBarContainer from './AppBarContainer';
 import TextField from '@mui/material/TextField';
 import { futureProducts } from '../../products';
 
+
 function Header({bangle}) {
     
     const {  isAuthenticated, user } = useAuth0()
@@ -27,6 +28,7 @@ function Header({bangle}) {
     console.log(search)
     const handleSearch = (e) => {
         setSearch(e.target.value)
+        
     }
 
 
@@ -34,6 +36,7 @@ function Header({bangle}) {
     let navigate = useNavigate()
     function redirect() {
         navigate("/product")
+        localStorage.setItem('search', JSON.stringify(search))
     }
 
     console.log(navigate)

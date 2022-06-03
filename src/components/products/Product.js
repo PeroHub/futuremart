@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState} from "react"
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
@@ -37,9 +37,25 @@ function Product() {
    };
 
 
-//    let searchItem = JSON.parse(localStorage.getItem('search'))
+   let searchItem = JSON.parse(localStorage.getItem('search'))
 
+   console.log(searchItem)
+  
+// const  search = (value) => {
+//     item.map((element) => {
+//         if(element.cetegory !== value){
+            
+//             classObj = "block"
+//         }else {
+//             console.log("false")
+            
+//         }
+//     })
 
+// }
+
+// search('Biro')
+      
 
 
 
@@ -54,8 +70,9 @@ function Product() {
             <Grid container spacing={6} columns={12} mt={1} sx={{  display:"flex", flexDirection:"row", justifyContent:"center"}} >
                 
                 {item.map((product) =>(
-                <Grid item xs={12} sm={12} md={4} key={product.id} sx={{}}>
+                <Grid item xs={12} sm={12} md={4} key={product.id} >
             
+                    <Box >
                     <Card xs={12} sx={{height:"45vh", textAlign:"end", backgroundColor:"#FAFAFA"}}>
                         <Button  variant="contained" size="small" sx={{backgroundColor:"#ED8204", borderRadius:"none"}} >{product.price}</Button>
                         <CardMedia  sx={{  display:"flex", alignItems:"center", justifyContent:"space-around"}}>
@@ -94,6 +111,7 @@ function Product() {
                     </CardActions>
                     </Card>
             
+                    </Box>
                                             
                 </Grid>
                 ))} 

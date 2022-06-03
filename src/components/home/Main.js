@@ -34,7 +34,7 @@ import PWSOFM4 from '../../images/PWSOFM4.png';
 
 
 import { useNavigate } from 'react-router-dom';
-
+import ReactWhatsapp from "react-whatsapp";
 
 
 
@@ -101,8 +101,10 @@ function Main() {
 
         return ( 
         <>
+        <ReactWhatsapp number="2347034825560" message="Hello!!" style={{backgroundColor: "blue", color: "#fff", padding: "5px", position: "fixed"}}>Contact Us</ReactWhatsapp>
             {/* First Grid Our products */}
             <Container maxWidth="lg" sx={{width:{xs:"100%", sm:"80%", md:"80%"}, mt: 8, overflowX: "hidden" }}>
+            
                 <Box >
                     <Typography sx={{ maxWwidth:"50px", textAlign:"left", color:"#333333", fontFamily:"Inter", fontSize:"30px", lineHeight:"47.2px", fontWeight:"600"}}variant="h5">Our Products</Typography>
 
